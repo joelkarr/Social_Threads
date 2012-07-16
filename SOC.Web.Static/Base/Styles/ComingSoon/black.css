@@ -1,0 +1,6 @@
+/* Black color scheme */
+body { background-color: #333333; }
+header { background-image: url(../../Images/ComingSoon/bg_header_black.png); }
+#progressbar { background-image: url(../../Images/ComingSoon/progressbar_fill_black.png); }
+.subscribe input.submit, #more_info_page input.submit { background-image: url(../../Images/ComingSoon/form_button_black.png); }
+	

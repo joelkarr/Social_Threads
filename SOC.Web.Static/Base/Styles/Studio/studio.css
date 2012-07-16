@@ -1,0 +1,35 @@
+﻿#studiomain {
+    width: 800px;
+    height: 500px;
+    display: inline;
+}
+#studioleft 
+{
+    float: left;
+    height: 500px;
+    width: 200px;
+    background-color: tan;
+}
+#studiocenter {
+    float: left;
+    width: 500px;
+    height: 500px;
+    
+}
+#studioheader {
+    height: 30px;
+    background-color: lightgrey;
+}
+#shirt 
+{
+    height: 470px;
+    background-image: url('../../img/designer/1front.jpg')
+}
+
+#mycanvas {
+    border: 1px solid white;
+    height: 340px;
+    width: 240px;
+    margin-left: 135px;
+
+}

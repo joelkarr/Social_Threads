@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Studio";
+    Layout = "~/Themes/Classic/Views/Shared/_Layout.cshtml";
+}
+@section HeadContent
+{
+        <link rel="stylesheet" href="@Url.Content("~/css/studio/studio.css")">
+}
+@section ScriptSection
+{
+ <script src=@Url.Content("~/js/libs/paper.js")></script>
+    <script src=@Url.Content("~/js/designer/studio.js")></script>
+}
+
+<h2>Studio</h2>
+    <div id="studioleft">
+        
+    </div>
+    <div id="studiocenter">
+        <div id="studioheader"></div>
+        <div id="shirt">
+                <canvas id="mycanvas">
+                    
+                </canvas>
+
+
+        </div>
+
+    </div>
+
+<div id="resource"><img src=@Url.Content("~/img/library/spider.png") id="spider" /></div>
+

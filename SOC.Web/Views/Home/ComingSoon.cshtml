@@ -1,0 +1,266 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<!doctype html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  
+  <!-- Page title -->
+  <title>Social-Threads Coming Soon</title>
+
+  <link rel="shortcut icon" href="favicon.png">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="http://localhost:56221/Base/Styles/ComingSoon/style.css"> <!-- Regular stylesheet -->
+  <link rel="stylesheet" href="http://localhost:56221/Base/Styles/ComingSoon/black.css"> <!-- Pick color scheme (black.css, blue.css, brown.css, dark_green.css, green.css, white.css)-->
+  
+  <!-- Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Cantarell:regular,italic,bold" rel="stylesheet" type="text/css">
+  
+  <!-- JavaScript -->
+  <script src="http://localhost:56221/Base/Scripts/jquery-1.4.1.min.js"></script> <!-- Load jQuery library -->
+  <script src="http://localhost:56221/Base/Scripts/modernizr-1.7.min.js"></script> <!-- Load Modernizr -->
+  <script>
+      $(function () {
+
+          /* Put your JavaScript here */
+
+      });
+  </script>
+</head>
+
+<body>
+  <div id="pattern"><div id="gradient">
+
+    <!-- Image background -->
+	<div id="background_image">
+		<!-- Insert image here -->
+	</div>
+	<!-- Image background end -->
+	
+  
+	<!-- Main page -->
+    <div id="main_page">
+  
+	  <!-- Header -->
+	  <header>
+	    <h1>Social Threads</h1> <!-- Set the page title -->
+	  </header>
+	  
+	  <!-- Additional content -->
+	  <div id="content"> &nbsp;
+	   		  
+		  
+		  <!-- Custom text -->
+		  <section class="text">
+			<p>coming soon</p>
+		  </section>
+		  <!-- Custom text end -->
+		  	  
+		  
+		  <!-- Progress -->
+		  <script>
+		      $(function () {
+		          $("#progressbar").animate({ width: $(".progress h2").text() }, 2000);
+		      });
+		  </script>
+		  <section class="progress">
+			<div id="progressbar"></div>
+			<h2>10%</h2> <!-- Set your progress, must be percentage -->
+		  </section>
+		  <!-- Progress end -->		 
+		  
+		  
+		  <!-- Short description -->
+		  <section class="description">
+			<div class="description_top"></div>
+			<div class="description_content">
+			  <p>Our Goal is Simple.</p>
+                <p>Close the Gaps in Custom Apparel Industry.</p>
+			  <p>This means allowing Screen Printers, Supplies, and Customers to interact more seamlessly than ever before  .</p>
+			</div>
+			<div class="description_bottom"></div>
+		  </section>		  
+		  <!-- Short description end -->
+		  
+		  
+
+		  
+		  
+		  <!-- Subscription form -->
+		  <script>
+		      $(function () {
+		          $(".subscribe input.submit").click(function (event) {
+		              event.preventDefault();
+		              event.returnValue = false;
+		              $.ajax({
+		                  type: "POST",
+		                  url: "subscribe.php",
+		                  data: { email: $(".subscribe input[name=email]").val() },
+		                  success: function (data) {
+		                      alert(data + 'a');
+		                      if (data == "successful") {
+		                          $(".subscribe p").html("Thanks for your interest! We will let you know.").slideDown();
+		                      } else if (data == "already_subscribed") {
+		                          $(".subscribe p").html("This email is already subscribed.").slideDown();
+		                      } else if (data == "invalid_email") {
+		                          $(".subscribe p").html("This email is invalid.").slideDown();
+		                      } else {
+		                          $(".subscribe p").html("Something went wrong. Please try again.").slideDown();
+		                      }
+		                  },
+		                  error: function () {
+		                      $(".subscribe p").html("Subscription is not available.").slideDown();
+		                  }
+		              });
+		          });
+		      });
+		  </script>
+		  <section class="subscribe">
+			<p></p>
+			<form method="post">
+			  <input name="email" placeholder="Your e-mail address...">
+			  <input type="submit" class="submit" value="Notify me">
+			</form>
+		  </section>
+		  <!-- Subscription form end -->
+		  
+		  
+		  <!-- More info, part 1 -->
+		  <script>
+		      $(function () {
+		          $("#show_more_info").click(function () {
+		              $("#main_page").fadeOut("slow", function () {
+		                  $("#more_info_page").fadeIn("slow");
+		              });
+		          });
+		          $("#show_main").click(function () {
+		              $("#more_info_page").fadeOut("slow", function () {
+		                  $("#main_page").fadeIn("slow");
+		              });
+		          });
+		      });
+		  </script>
+		  <section class="more_info">
+			<a href="#" id="show_more_info" class="button">More information</a>
+		  </section>
+		  <!-- More info, part 1 end -->
+		  
+		  
+	  </div>
+	  
+	</div>
+	<!-- Main page end -->
+	
+	<!-- More info, part 2 -->
+	<div id="more_info_page"><div class="dark_background"></div>
+		
+	  <a href="#" id="show_main" class="button">Back</a><div class="clearfix"></div>
+	
+	   <!-- About -->
+	  <section class="about">
+	  
+		<h2>About</h2>
+		
+		<!-- First paragraph -->		
+		<p>We started screen printing in 2007 as a fun way to make some extra money.  With no real solution for a whole list of hurdles to get started, we set out to solve many of the issues we faced and wanted to share it with everyone else.</p>
+		<p>Drop us a comment below with some of the issues you have and we will do our best to help you out.</p>
+		<!-- First paragraph end -->
+		
+	  
+	
+	  	
+		<!-- Social icons -->
+		<h3>Social</h3>
+		<a href=""><img src="http://localhost:56221/Base/Images/ComingSoon/facebook.png" alt="Facebook" class="social" /></a>
+		<a href=""><img src="http://localhost:56221/Base/Images/twitter.png" alt="Twitter" class="social" /></a>
+		<a href=""><img src="http://localhost:56221/Base/Images/linkedin.png" alt="LinkedIn" class="social" /></a>
+		<!-- Social icons end -->
+	  
+	  
+		<!-- Contact form -->
+		<script>
+		    $(function () {
+		        $("#more_info_page input.submit").click(function (event) {
+		            event.preventDefault();
+		            event.returnValue = false;
+		            $.ajax({
+		                type: "POST",
+		                url: "contact.php",
+		                data: {
+		                    email: $("#more_info_page input[name=email]").val(),
+		                    text: $("#more_info_page textarea[name=text]").val()
+		                },
+		                success: function (data) {
+		                    if (data == "successful") {
+		                        $(".contact_form_status").html("Message has been sent.").slideDown();
+		                    } else if (data == "invalid_email") {
+		                        $(".contact_form_status").html("This email is invalid.").slideDown();
+		                    } else {
+		                        $(".contact_form_status").html("Something went wrong. Please try again.").slideDown();
+		                    }
+		                },
+		                error: function () {
+		                    $(".contact_form_status").html("Contact form is not available.").slideDown();
+		                }
+		            });
+		        });
+		    });
+		</script>
+		<h3>Contact form</h3>		
+		<p class="contact_form_status"></p>
+		<form method="post" class="clearfix">
+		  <input name="email" placeholder="Your e-mail">
+		  <textarea name="text"></textarea>
+		  <input type="submit" class="submit" value="Send a message">
+		</form>
+		<!-- Contact form end -->
+		
+		
+	  </section>
+	  <!-- About end -->
+	  
+	
+	  <!-- Contact -->
+	  <section class="contact">
+	  
+		<h2>Contact</h2>
+		
+		<!-- First person contact card -->
+		<p class="person vcard">
+		 @* <img src="img/avatar.png" alt="John Doe" class="photo" />*@
+		  <span class="fn n">Joel Karr <em>Software Engineer</em></span>
+		  <span class="email">joelkarr@social-threads.com</span>
+		  @*<span class="tel">+421 000 111 222</span>*@
+		  <span class="clearfix"></span>
+		</p>
+		<!-- First person contact card end -->
+	  
+	  
+	    <!-- Second person contact card -->
+		<p class="person vcard">
+		  @*<img src="img/avatar.png" alt="John Smith" class="photo" />*@
+		  <span class="fn n">Josh Karr <em>Project Manager</em></span>
+		  <span class="email">joshkarr@social-threads.com</span>
+		  @*<span class="tel">+421 111 222 333</span>*@
+		  <span class="clearfix"></span>
+		</p>
+		<!-- Second person contact end -->
+	  
+		<div class="clearfix"></div>
+		
+	  </section>
+	  <!-- Contact end-->
+		  
+	</div>
+	<!-- More info, part 2 end -->
+	
+  </div></div>  
+</body>
+</html>

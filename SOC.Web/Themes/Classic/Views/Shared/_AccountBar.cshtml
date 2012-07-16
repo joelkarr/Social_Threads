@@ -1,0 +1,21 @@
+﻿
+<div class="black bar">
+            @if (Request.IsAuthenticated)
+            {
+                @Html.ActionLink("My Account", "Quote", "Pricing")
+                <span>"|"</span>
+                @Html.ActionLink("My Orders", "Status", "Order")
+            }
+    <div class="floatRight greenFont">
+        @if (Request.IsAuthenticated)
+        {
+            <text>Welcome <b>@Context.User.Identity.Name</b>!
+                @Html.ActionLink("Log Off", "LogOff", "Account")</text>
+        }
+        else
+        {
+<text>@Html.ActionLink("Log On", "LogOn", "Account")</text>
+
+        }
+    </div> 
+</div>

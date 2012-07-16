@@ -1,0 +1,41 @@
+﻿@{
+    Layout = "~/Themes/Classic/Views/Shared/_Layout.cshtml";
+}
+<div id="page" class="container">
+    <div id="slidertron">
+        <div id="slider">
+            <div class="shadow-left"></div>
+            <div class="shadow-right"></div>
+            <div class="viewer">
+                <div class="reel">
+                    <div class="slide">
+                        <div class="image"><img src="images/slide01.jpg" alt="" /><span></span></div>
+                        <a href="#" class="link">Learn more ...</a>
+                    </div>
+                    <div class="slide">
+                        <div class="image"><img src="images/slide02.jpg" alt="" /><span></span></div>
+                        <a href="#" class="link">Learn more ...</a>
+                    </div>
+                    <div class="slide">
+                        <div class="image"><img src="images/slide03.jpg" alt="" /><span></span></div>
+                        <a href="#" class="link">Learn more ...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="welcome">
+        <div id="column1">
+            <h2>Hello!</h2>
+        </div>
+        <div id="column2">
+            <p>lorem ipsum dolor sit amet nullam consequat veroeros blandit, sit amet  phasellus consequat magna nisl, lorem vestibulum, aliquam feugiat lorem tempus.</p>
+        </div>
+    </div>
+</div>
+
+@section ScriptSection
+{
+    <script type="text/javascript" src="scripts\jquery.slidertron-1.1.js"></script>
+<script type="text/javascript" src="init.js"></script>
+}

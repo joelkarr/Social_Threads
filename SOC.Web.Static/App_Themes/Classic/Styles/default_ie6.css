@@ -1,0 +1,37 @@
+#page {
+	background: none;
+}
+
+#page-bg {
+	background: url(images/page-content-bg_ie6.png) repeat-y left 50px;
+}
+
+#page-bgtop {
+	clear: both;
+	background: url(images/page-content-top-bg_ie6.png) no-repeat center top;
+}
+
+#page-bgbtm {
+	background: url(images/page-bottom-bg_ie6.png) no-repeat center bottom;
+}
+
+#heading-title {
+	background: url(images/heading-title-bg_ie6.png) no-repeat center top;
+}
+
+#footer-top-shadow {
+	background: none;
+}
+
+#shadow {
+	background: none;
+}
+
+#slider .viewer .reel .slide span {
+	background: url(images/pics-border-bg_ie6.png) no-repeat left top;
+}
+
+
+#welcome {
+	background: url(images/welcome-bg_ie6.png) no-repeat left top;
+}

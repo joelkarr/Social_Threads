@@ -1,0 +1,6 @@
+/* Blue color scheme */
+body { background-color: #417E89; }
+header { background-image: url(../../Images/ComingSoon/bg_header_blue.png); }
+#progressbar { background-image: url(../../Images/ComingSoon/progressbar_fill_blue.png); }
+.subscribe input.submit, #more_info_page input.submit { background-image: url(../../Images/ComingSoon/form_button_blue.png); }
+	

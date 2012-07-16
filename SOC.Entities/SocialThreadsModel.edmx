@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl" Namespace="SocialThreadsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
+        <EntityContainer Name="SocialThreadsModelTargetContainer" >
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="SocialThreadsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="SocialThreadsModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="People" EntityType="SocialThreadsModel.Person" />
+          <EntitySet Name="Companies" EntityType="SocialThreadsModel.Company" />
+          <EntitySet Name="Orders" EntityType="SocialThreadsModel.Order" />
+          <EntitySet Name="Graphics" EntityType="SocialThreadsModel.Graphic" />
+          <EntitySet Name="Designs" EntityType="SocialThreadsModel.Design" />
+          <EntitySet Name="Items" EntityType="SocialThreadsModel.Item" />
+          <EntitySet Name="Sizes" EntityType="SocialThreadsModel.Size" />
+          <EntitySet Name="Colors" EntityType="SocialThreadsModel.Color" />
+          <EntitySet Name="GraphicDesigns" EntityType="SocialThreadsModel.GraphicDesign" />
+          <EntitySet Name="Vectors" EntityType="SocialThreadsModel.Vector" />
+          <AssociationSet Name="GraphicVector" Association="SocialThreadsModel.GraphicVector">
+            <End Role="Graphic" EntitySet="Graphics" />
+            <End Role="Vector" EntitySet="Vectors" />
+          </AssociationSet>
+          <AssociationSet Name="VectorColor" Association="SocialThreadsModel.VectorColor">
+            <End Role="Vector" EntitySet="Vectors" />
+            <End Role="Color" EntitySet="Colors" />
+          </AssociationSet>
+          <AssociationSet Name="DesignGraphicDesign" Association="SocialThreadsModel.DesignGraphicDesign">
+            <End Role="Design" EntitySet="Designs" />
+            <End Role="GraphicDesign" EntitySet="GraphicDesigns" />
+          </AssociationSet>
+          <AssociationSet Name="GraphicDesignGraphic" Association="SocialThreadsModel.GraphicDesignGraphic">
+            <End Role="GraphicDesign" EntitySet="GraphicDesigns" />
+            <End Role="Graphic" EntitySet="Graphics" />
+          </AssociationSet>
+          <EntitySet Name="Keywords" EntityType="SocialThreadsModel.Keywords" />
+          <AssociationSet Name="GraphicKeywords" Association="SocialThreadsModel.GraphicKeywords">
+            <End Role="Graphic" EntitySet="Graphics" />
+            <End Role="Keywords" EntitySet="Keywords" />
+          </AssociationSet>
+          <EntitySet Name="SelectedItems" EntityType="SocialThreadsModel.SelectedItem" />
+          <AssociationSet Name="ItemWithSizeSize" Association="SocialThreadsModel.ItemWithSizeSize">
+            <End Role="ItemWithSize" EntitySet="SelectedItems" />
+            <End Role="Size" EntitySet="Sizes" />
+          </AssociationSet>
+          <AssociationSet Name="ItemWithSizeItem" Association="SocialThreadsModel.ItemWithSizeItem">
+            <End Role="ItemWithSize" EntitySet="SelectedItems" />
+            <End Role="Item" EntitySet="Items" />
+          </AssociationSet>
+          <AssociationSet Name="DesignItemWithSize" Association="SocialThreadsModel.DesignItemWithSize">
+            <End Role="Design" EntitySet="Designs" />
+            <End Role="ItemWithSize" EntitySet="SelectedItems" />
+          </AssociationSet>
+          <EntitySet Name="AvailableSizes1" EntityType="SocialThreadsModel.AvailableSize" />
+          <AssociationSet Name="ItemAvailableSizes" Association="SocialThreadsModel.ItemAvailableSizes">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="AvailableSizes" EntitySet="AvailableSizes1" />
+          </AssociationSet>
+          <AssociationSet Name="AvailableSizeSize" Association="SocialThreadsModel.AvailableSizeSize">
+            <End Role="AvailableSize" EntitySet="AvailableSizes1" />
+            <End Role="Size" EntitySet="Sizes" />
+          </AssociationSet>
+          <EntitySet Name="AvailableColors" EntityType="SocialThreadsModel.AvailableColor" />
+          <AssociationSet Name="ItemAvailableColor" Association="SocialThreadsModel.ItemAvailableColor">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="AvailableColor" EntitySet="AvailableColors" />
+          </AssociationSet>
+          <AssociationSet Name="AvailableColorColor" Association="SocialThreadsModel.AvailableColorColor">
+            <End Role="AvailableColor" EntitySet="AvailableColors" />
+            <End Role="Color" EntitySet="Colors" />
+          </AssociationSet>
+          <EntitySet Name="Manufacturers" EntityType="SocialThreadsModel.Manufacturer" />
+          <AssociationSet Name="ItemManufacturer" Association="SocialThreadsModel.ItemManufacturer">
+            <End Role="Item" EntitySet="Items" />
+            <End Role="Manufacturer" EntitySet="Manufacturers" />
+          </AssociationSet>
+          <EntitySet Name="Categories" EntityType="SocialThreadsModel.Category" />
+          <AssociationSet Name="CategoryItem" Association="SocialThreadsModel.CategoryItem">
+            <End Role="Category" EntitySet="Categories" />
+            <End Role="Item" EntitySet="Items" />
+          </AssociationSet>
+          <EntitySet Name="PrintLocations" EntityType="SocialThreadsModel.PrintLocation" />
+          <AssociationSet Name="GraphicDesignPrintLocation" Association="SocialThreadsModel.GraphicDesignPrintLocation">
+            <End Role="GraphicDesign" EntitySet="GraphicDesigns" />
+            <End Role="PrintLocation" EntitySet="PrintLocations" />
+          </AssociationSet>
+          <AssociationSet Name="OrderDesign" Association="SocialThreadsModel.OrderDesign">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="Design" EntitySet="Designs" />
+          </AssociationSet>
+          <AssociationSet Name="CompanyOrder" Association="SocialThreadsModel.CompanyOrder">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="PersonOrder" Association="SocialThreadsModel.PersonOrder">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <EntitySet Name="Addresses" EntityType="SocialThreadsModel.Address" />
+          <EntitySet Name="AddressTypes" EntityType="SocialThreadsModel.AddressType" />
+          <AssociationSet Name="AddressTypeAddress" Association="SocialThreadsModel.AddressTypeAddress">
+            <End Role="AddressType" EntitySet="AddressTypes" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="PersonAddress" Association="SocialThreadsModel.PersonAddress">
+            <End Role="Person" EntitySet="People" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <AssociationSet Name="CompanyAddress" Association="SocialThreadsModel.CompanyAddress">
+            <End Role="Company" EntitySet="Companies" />
+            <End Role="Address" EntitySet="Addresses" />
+          </AssociationSet>
+          <EntitySet Name="OrderStatus" EntityType="SocialThreadsModel.OrderStatus" />
+          <AssociationSet Name="OrderStatusOrder" Association="SocialThreadsModel.OrderStatusOrder">
+            <End Role="OrderStatus" EntitySet="OrderStatus" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Orders" Relationship="SocialThreadsModel.PersonOrder" FromRole="Person" ToRole="Order" />
+          <Property Type="String" Name="FirstName" Nullable="false" />
+          <Property Type="String" Name="LastName" Nullable="false" />
+          <NavigationProperty Name="Addresses" Relationship="SocialThreadsModel.PersonAddress" FromRole="Person" ToRole="Address" />
+        </EntityType>
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Orders" Relationship="SocialThreadsModel.CompanyOrder" FromRole="Company" ToRole="Order" />
+          <NavigationProperty Name="Addresses" Relationship="SocialThreadsModel.CompanyAddress" FromRole="Company" ToRole="Address" />
+          <Property Type="String" Name="Name" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Designs" Relationship="SocialThreadsModel.OrderDesign" FromRole="Order" ToRole="Design" />
+          <NavigationProperty Name="Company" Relationship="SocialThreadsModel.CompanyOrder" FromRole="Order" ToRole="Company" />
+          <NavigationProperty Name="Person" Relationship="SocialThreadsModel.PersonOrder" FromRole="Order" ToRole="Person" />
+          <NavigationProperty Name="OrderStatu" Relationship="SocialThreadsModel.OrderStatusOrder" FromRole="Order" ToRole="OrderStatus" />
+        </EntityType>
+        <EntityType Name="Graphic">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Vectors" Relationship="SocialThreadsModel.GraphicVector" FromRole="Graphic" ToRole="Vector" />
+          <NavigationProperty Name="GraphicDesign" Relationship="SocialThreadsModel.GraphicDesignGraphic" FromRole="Graphic" ToRole="GraphicDesign" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Keywords" Relationship="SocialThreadsModel.GraphicKeywords" FromRole="Graphic" ToRole="Keywords" />
+        </EntityType>
+        <EntityType Name="Design">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="GraphicDesigns" Relationship="SocialThreadsModel.DesignGraphicDesign" FromRole="Design" ToRole="GraphicDesign" />
+          <NavigationProperty Name="ItemWithSizes" Relationship="SocialThreadsModel.DesignItemWithSize" FromRole="Design" ToRole="ItemWithSize" />
+          <NavigationProperty Name="Order" Relationship="SocialThreadsModel.OrderDesign" FromRole="Design" ToRole="Order" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="SelectedItem" Relationship="SocialThreadsModel.ItemWithSizeItem" FromRole="Item" ToRole="ItemWithSize" />
+          <NavigationProperty Name="AvailableSizes" Relationship="SocialThreadsModel.ItemAvailableSizes" FromRole="Item" ToRole="AvailableSizes" />
+          <NavigationProperty Name="AvailableColors" Relationship="SocialThreadsModel.ItemAvailableColor" FromRole="Item" ToRole="AvailableColor" />
+          <NavigationProperty Name="Manufacturer" Relationship="SocialThreadsModel.ItemManufacturer" FromRole="Item" ToRole="Manufacturer" />
+          <Property Type="String" Name="ShortDescription" Nullable="false" />
+          <Property Type="String" Name="Description" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="String" Name="ProductNumber" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="SocialThreadsModel.CategoryItem" FromRole="Item" ToRole="Category" />
+        </EntityType>
+        <EntityType Name="Size">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="SelectedItems" Relationship="SocialThreadsModel.ItemWithSizeSize" FromRole="Size" ToRole="ItemWithSize" />
+          <NavigationProperty Name="AvailableSizes" Relationship="SocialThreadsModel.AvailableSizeSize" FromRole="Size" ToRole="AvailableSize" />
+        </EntityType>
+        <EntityType Name="Color">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Vector" Relationship="SocialThreadsModel.VectorColor" FromRole="Color" ToRole="Vector" />
+          <NavigationProperty Name="AvailableColor" Relationship="SocialThreadsModel.AvailableColorColor" FromRole="Color" ToRole="AvailableColor" />
+        </EntityType>
+        <EntityType Name="GraphicDesign">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Design" Relationship="SocialThreadsModel.DesignGraphicDesign" FromRole="GraphicDesign" ToRole="Design" />
+          <NavigationProperty Name="Graphics" Relationship="SocialThreadsModel.GraphicDesignGraphic" FromRole="GraphicDesign" ToRole="Graphic" />
+          <Property Type="String" Name="Xoffset" Nullable="false" />
+          <Property Type="String" Name="Yoffset" Nullable="false" />
+          <Property Type="String" Name="Xscale" Nullable="false" />
+          <Property Type="String" Name="Yscale" Nullable="false" />
+          <Property Type="String" Name="Rotation" Nullable="false" />
+          <NavigationProperty Name="PrintLocation" Relationship="SocialThreadsModel.GraphicDesignPrintLocation" FromRole="GraphicDesign" ToRole="PrintLocation" />
+        </EntityType>
+        <EntityType Name="Vector">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Graphic" Relationship="SocialThreadsModel.GraphicVector" FromRole="Vector" ToRole="Graphic" />
+          <NavigationProperty Name="Colors" Relationship="SocialThreadsModel.VectorColor" FromRole="Vector" ToRole="Color" />
+          <Property Type="String" Name="Xoffset" Nullable="false" />
+          <Property Type="String" Name="Yoffset" Nullable="false" />
+        </EntityType>
+        <Association Name="GraphicVector">
+          <End Type="SocialThreadsModel.Graphic" Role="Graphic" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Vector" Role="Vector" Multiplicity="*" />
+        </Association>
+        <Association Name="VectorColor">
+          <End Type="SocialThreadsModel.Vector" Role="Vector" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Color" Role="Color" Multiplicity="*" />
+        </Association>
+        <Association Name="DesignGraphicDesign">
+          <End Type="SocialThreadsModel.Design" Role="Design" Multiplicity="1" />
+          <End Type="SocialThreadsModel.GraphicDesign" Role="GraphicDesign" Multiplicity="*" />
+        </Association>
+        <Association Name="GraphicDesignGraphic">
+          <End Type="SocialThreadsModel.GraphicDesign" Role="GraphicDesign" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Graphic" Role="Graphic" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Keywords">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Value" Nullable="false" />
+          <NavigationProperty Name="Graphic" Relationship="SocialThreadsModel.GraphicKeywords" FromRole="Keywords" ToRole="Graphic" />
+        </EntityType>
+        <Association Name="GraphicKeywords">
+          <End Type="SocialThreadsModel.Graphic" Role="Graphic" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Keywords" Role="Keywords" Multiplicity="*" />
+        </Association>
+        <EntityType Name="SelectedItem">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Size" Relationship="SocialThreadsModel.ItemWithSizeSize" FromRole="ItemWithSize" ToRole="Size" />
+          <NavigationProperty Name="Item" Relationship="SocialThreadsModel.ItemWithSizeItem" FromRole="ItemWithSize" ToRole="Item" />
+          <NavigationProperty Name="Design" Relationship="SocialThreadsModel.DesignItemWithSize" FromRole="ItemWithSize" ToRole="Design" />
+          <Property Type="String" Name="Price" Nullable="false" />
+        </EntityType>
+        <Association Name="ItemWithSizeSize">
+          <End Type="SocialThreadsModel.SelectedItem" Role="ItemWithSize" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Size" Role="Size" Multiplicity="*" />
+        </Association>
+        <Association Name="ItemWithSizeItem">
+          <End Type="SocialThreadsModel.SelectedItem" Role="ItemWithSize" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Item" Role="Item" Multiplicity="*" />
+        </Association>
+        <Association Name="DesignItemWithSize">
+          <End Type="SocialThreadsModel.Design" Role="Design" Multiplicity="1" />
+          <End Type="SocialThreadsModel.SelectedItem" Role="ItemWithSize" Multiplicity="*" />
+        </Association>
+        <EntityType Name="AvailableSize">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Item" Relationship="SocialThreadsModel.ItemAvailableSizes" FromRole="AvailableSizes" ToRole="Item" />
+          <NavigationProperty Name="Size" Relationship="SocialThreadsModel.AvailableSizeSize" FromRole="AvailableSize" ToRole="Size" />
+        </EntityType>
+        <Association Name="ItemAvailableSizes">
+          <End Type="SocialThreadsModel.Item" Role="Item" Multiplicity="1" />
+          <End Type="SocialThreadsModel.AvailableSize" Role="AvailableSizes" Multiplicity="*" />
+        </Association>
+        <Association Name="AvailableSizeSize">
+          <End Type="SocialThreadsModel.AvailableSize" Role="AvailableSize" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Size" Role="Size" Multiplicity="*" />
+        </Association>
+        <EntityType Name="AvailableColor">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Item" Relationship="SocialThreadsModel.ItemAvailableColor" FromRole="AvailableColor" ToRole="Item" />
+          <NavigationProperty Name="Colors" Relationship="SocialThreadsModel.AvailableColorColor" FromRole="AvailableColor" ToRole="Color" />
+        </EntityType>
+        <Association Name="ItemAvailableColor">
+          <End Type="SocialThreadsModel.Item" Role="Item" Multiplicity="1" />
+          <End Type="SocialThreadsModel.AvailableColor" Role="AvailableColor" Multiplicity="*" />
+        </Association>
+        <Association Name="AvailableColorColor">
+          <End Type="SocialThreadsModel.AvailableColor" Role="AvailableColor" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Color" Role="Color" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Manufacturer">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Item" Relationship="SocialThreadsModel.ItemManufacturer" FromRole="Manufacturer" ToRole="Item" />
+          <Property Type="String" Name="Name" Nullable="false" />
+        </EntityType>
+        <Association Name="ItemManufacturer">
+          <End Type="SocialThreadsModel.Item" Role="Item" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Manufacturer" Role="Manufacturer" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Category">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Items" Relationship="SocialThreadsModel.CategoryItem" FromRole="Category" ToRole="Item" />
+        </EntityType>
+        <Association Name="CategoryItem">
+          <End Type="SocialThreadsModel.Category" Role="Category" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Item" Role="Item" Multiplicity="*" />
+        </Association>
+        <EntityType Name="PrintLocation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="GraphicDesign" Relationship="SocialThreadsModel.GraphicDesignPrintLocation" FromRole="PrintLocation" ToRole="GraphicDesign" />
+          <Property Type="String" Name="Name" Nullable="false" />
+        </EntityType>
+        <Association Name="GraphicDesignPrintLocation">
+          <End Type="SocialThreadsModel.GraphicDesign" Role="GraphicDesign" Multiplicity="1" />
+          <End Type="SocialThreadsModel.PrintLocation" Role="PrintLocation" Multiplicity="*" />
+        </Association>
+        <Association Name="OrderDesign">
+          <End Type="SocialThreadsModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Design" Role="Design" Multiplicity="*" />
+        </Association>
+        <Association Name="CompanyOrder">
+          <End Type="SocialThreadsModel.Company" Role="Company" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Order" Role="Order" Multiplicity="*" />
+        </Association>
+        <Association Name="PersonOrder">
+          <End Type="SocialThreadsModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Order" Role="Order" Multiplicity="*" />
+        </Association>
+        <EntityType Name="Address">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Address1" Nullable="false" />
+          <Property Type="String" Name="Address2" Nullable="false" />
+          <Property Type="String" Name="City" Nullable="false" />
+          <Property Type="String" Name="State" Nullable="false" />
+          <Property Type="String" Name="Zip" Nullable="false" />
+          <Property Type="String" Name="isActive" Nullable="false" />
+          <Property Type="String" Name="isPrimary" Nullable="false" />
+          <NavigationProperty Name="AddressType" Relationship="SocialThreadsModel.AddressTypeAddress" FromRole="Address" ToRole="AddressType" />
+          <NavigationProperty Name="Person" Relationship="SocialThreadsModel.PersonAddress" FromRole="Address" ToRole="Person" />
+          <NavigationProperty Name="Company" Relationship="SocialThreadsModel.CompanyAddress" FromRole="Address" ToRole="Company" />
+        </EntityType>
+        <EntityType Name="AddressType">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Addresses" Relationship="SocialThreadsModel.AddressTypeAddress" FromRole="AddressType" ToRole="Address" />
+        </EntityType>
+        <Association Name="AddressTypeAddress">
+          <End Type="SocialThreadsModel.AddressType" Role="AddressType" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Address" Role="Address" Multiplicity="*" />
+        </Association>
+        <Association Name="PersonAddress">
+          <End Type="SocialThreadsModel.Person" Role="Person" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Address" Role="Address" Multiplicity="*" />
+        </Association>
+        <Association Name="CompanyAddress">
+          <End Type="SocialThreadsModel.Company" Role="Company" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Address" Role="Address" Multiplicity="*" />
+        </Association>
+        <EntityType Name="OrderStatus">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <NavigationProperty Name="Orders" Relationship="SocialThreadsModel.OrderStatusOrder" FromRole="OrderStatus" ToRole="Order" />
+        </EntityType>
+        <Association Name="OrderStatusOrder">
+          <End Type="SocialThreadsModel.OrderStatus" Role="OrderStatus" Multiplicity="1" />
+          <End Type="SocialThreadsModel.Order" Role="Order" Multiplicity="*" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="SocialThreadsModel" />
+        <Alias Key="Target" Value="SocialThreadsModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="SocialThreadsModelContainer" StorageEntityContainer="SocialThreadsModelTargetContainer">
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="SocialThreadsModel" >
+        <EntityTypeShape EntityType="SocialThreadsModel.Person" Width="1.5" PointX="7.875" PointY="2.625" Height="1.7879850260416665" />
+        <EntityTypeShape EntityType="SocialThreadsModel.Company" Width="1.5" PointX="5.625" PointY="1" Height="1.7879850260416661" />
+        <EntityTypeShape EntityType="SocialThreadsModel.Order" Width="1.5" PointX="5.625" PointY="3.25" Height="1.2110807291666665" />
+        <EntityTypeShape EntityType="SocialThreadsModel.Graphic" Width="1.5" PointX="1.875" PointY="6.75" Height="1.9802864583333335" />
+        <EntityTypeShape EntityType="SocialThreadsModel.Design" Width="1.5" PointX="5.75" PointY="5.875" Height="1.2110807291666665" />
+        <EntityTypeShape EntityType="SocialThreadsModel.Item" Width="1.5" PointX="11.25" PointY="7.875" Height="2.7494921874999996" />
+        <EntityTypeShape EntityType="SocialThreadsModel.Size" Width="1.5" PointX="10.25" PointY="5.125" Height="1.4033821614583335" />
+        <EntityTypeShape EntityType="SocialThreadsModel.Color" Width="1.5" PointX="6.5" PointY="9.25" Height="1.2110807291666657" />
+        <EntityTypeShape EntityType="SocialThreadsModel.GraphicDesign" Width="1.5" PointX="4.5" PointY="7.75" Height="2.5571907552083335" />
+        <EntityTypeShape EntityType="SocialThreadsModel.Vector" Width="1.5" PointX="1" PointY="9.625" Height="1.9802864583333335" />
+        <AssociationConnector Association="SocialThreadsModel.GraphicVector">
+          <ConnectorPoint PointX="2.1875" PointY="8.7302864583333335" />
+          <ConnectorPoint PointX="2.1875" PointY="9.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.VectorColor">
+          <ConnectorPoint PointX="2.5" PointY="10.703837890625" />
+          <ConnectorPoint PointX="5.166666666666667" PointY="10.703837890625" />
+          <ConnectorPoint PointX="5.333333333333333" PointY="10.703837890625" />
+          <ConnectorPoint PointX="6.5" PointY="10.703837890625" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.DesignGraphicDesign">
+          <ConnectorPoint PointX="5.75" PointY="6.672841796875" />
+          <ConnectorPoint PointX="5.1249994999999995" PointY="6.672841796875" />
+          <ConnectorPoint PointX="5.1249994999999995" PointY="7.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.GraphicDesignGraphic">
+          <ConnectorPoint PointX="4.5" PointY="8.2401432291666659" />
+          <ConnectorPoint PointX="3.375" PointY="8.2401432291666659" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SocialThreadsModel.Keywords" Width="1.5" PointX="0.5" PointY="4.375" Height="1.5956835937499996" />
+        <AssociationConnector Association="SocialThreadsModel.GraphicKeywords">
+          <ConnectorPoint PointX="2.6875005" PointY="6.75" />
+          <ConnectorPoint PointX="2.6875005" PointY="5.172841796875" />
+          <ConnectorPoint PointX="2" PointY="5.172841796875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SocialThreadsModel.SelectedItem" Width="1.5" PointX="8.125" PointY="6.5" Height="1.9802864583333335" />
+        <AssociationConnector Association="SocialThreadsModel.ItemWithSizeSize">
+          <ConnectorPoint PointX="8.875" PointY="6.5" />
+          <ConnectorPoint PointX="8.875" PointY="5.922841796875" />
+          <ConnectorPoint PointX="10.25" PointY="5.922841796875" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.ItemWithSizeItem">
+          <ConnectorPoint PointX="9.625" PointY="8.1776432291666659" />
+          <ConnectorPoint PointX="11.25" PointY="8.1776432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.DesignItemWithSize">
+          <ConnectorPoint PointX="7.25" PointY="7.0814925130208337" />
+          <ConnectorPoint PointX="8.125" PointY="7.0814925130208337" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SocialThreadsModel.AvailableSize" Width="1.5" PointX="13.5" PointY="5.75" Height="1.4033821614583335" />
+        <AssociationConnector Association="SocialThreadsModel.ItemAvailableSizes">
+          <ConnectorPoint PointX="12.75" PointY="8.9296875" />
+          <ConnectorPoint PointX="13.71875" PointY="8.9296875" />
+          <ConnectorPoint PointX="13.71875" PointY="7.34568359375" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.AvailableSizeSize">
+          <ConnectorPoint PointX="13.5" PointY="6.235341796875" />
+          <ConnectorPoint PointX="11.75" PointY="6.235341796875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SocialThreadsModel.AvailableColor" Width="1.5" PointX="8.625" PointY="9.125" Height="1.5956835937499996" />
+        <AssociationConnector Association="SocialThreadsModel.ItemAvailableColor">
+          <ConnectorPoint PointX="11.25" PointY="9.87474609375" />
+          <ConnectorPoint PointX="10.125" PointY="9.87474609375" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.AvailableColorColor">
+          <ConnectorPoint PointX="8.625" PointY="9.985341796875" />
+          <ConnectorPoint PointX="8" PointY="9.985341796875" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SocialThreadsModel.Manufacturer" Width="1.5" PointX="14" PointY="9.625" Height="1.5956835937499996" />
+        <AssociationConnector Association="SocialThreadsModel.ItemManufacturer">
+          <ConnectorPoint PointX="12.75" PointY="10.12474609375" />
+          <ConnectorPoint PointX="14" PointY="10.12474609375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SocialThreadsModel.Category" Width="1.5" PointX="15.5" PointY="8" Height="1.4033821614583335" />
+        <AssociationConnector Association="SocialThreadsModel.CategoryItem">
+          <ConnectorPoint PointX="15.5" PointY="8.40234375" />
+          <ConnectorPoint PointX="13.802083333333334" PointY="8.40234375" />
+          <ConnectorPoint PointX="13.635416666666666" PointY="8.40234375" />
+          <ConnectorPoint PointX="12.75" PointY="8.40234375" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SocialThreadsModel.PrintLocation" Width="1.5" PointX="4.5" PointY="11.25" Height="1.5956835937499996" />
+        <AssociationConnector Association="SocialThreadsModel.GraphicDesignPrintLocation">
+          <ConnectorPoint PointX="5.25" PointY="10.4994921875" />
+          <ConnectorPoint PointX="5.25" PointY="11.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.OrderDesign">
+          <ConnectorPoint PointX="6.4375" PointY="4.6533821614583335" />
+          <ConnectorPoint PointX="6.4375" PointY="5.875" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.CompanyOrder">
+          <ConnectorPoint PointX="6.375" PointY="2.7879850260416661" />
+          <ConnectorPoint PointX="6.375" PointY="3.25" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.PersonOrder">
+          <ConnectorPoint PointX="7.875" PointY="3.8314925130208333" />
+          <ConnectorPoint PointX="7.125" PointY="3.8314925130208333" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SocialThreadsModel.Address" Width="1.5" PointX="10.875" PointY="1.5" Height="2.5571907552083326" />
+        <EntityTypeShape EntityType="SocialThreadsModel.AddressType" Width="1.5" PointX="12.875" PointY="0.5" Height="1.4033821614583333" />
+        <AssociationConnector Association="SocialThreadsModel.AddressTypeAddress">
+          <ConnectorPoint PointX="12.875" PointY="1.7978417968750002" />
+          <ConnectorPoint PointX="12.375" PointY="1.7978417968750002" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.PersonAddress">
+          <ConnectorPoint PointX="9.375" PointY="3.5333968098958328" />
+          <ConnectorPoint PointX="10.875" PointY="3.5333968098958328" />
+        </AssociationConnector>
+        <AssociationConnector Association="SocialThreadsModel.CompanyAddress">
+          <ConnectorPoint PointX="7.125" PointY="2.03125" />
+          <ConnectorPoint PointX="10.875" PointY="2.03125" />
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SocialThreadsModel.OrderStatus" Width="1.5" PointX="3.5" PointY="3" Height="1.4033821614583326" />
+        <AssociationConnector Association="SocialThreadsModel.OrderStatusOrder">
+          <ConnectorPoint PointX="5" PointY="3.922841796875" />
+          <ConnectorPoint PointX="5.625" PointY="3.922841796875" />
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
