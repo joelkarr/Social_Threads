@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using SOC.Entities;
+using SOC.Web.Models.ViewModels.Base;
 
 namespace SOC.Web.Controllers
 {
-    public class OrderController : Controller
+    public class OrderController : BaseController
     {
         //
         // GET: /Order/
 
-        public ActionResult Status()
+        public ActionResult Form()
         {
-            return View();
+            var model = new BaseViewModel();
+            return View("Form", model);
         }
 
     }

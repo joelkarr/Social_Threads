@@ -7,11 +7,13 @@ namespace SOC.Web.Controllers
     {
         public ActionResult Index()
         {
-            return View("ComingSoon");
+            return ComingSoon();
         }
-        public ActionResult About()
+
+        public ActionResult ComingSoon()
         {
-            return ThemeView("About");
+            var model = new BaseViewModel();
+            return View("ComingSoon", model);
         }
     }
 }

@@ -141,6 +141,43 @@
     <Content Include="App_Themes\Classic\Images\wrapper-bg.png" />
     <Content Include="App_Themes\Classic\Styles\default.css" />
     <Content Include="App_Themes\Classic\Styles\default_ie6.css" />
+    <Content Include="App_Themes\Default\Images\ajax-loader.gif" />
+    <Content Include="App_Themes\Default\Images\arrow-superfish-right.png" />
+    <Content Include="App_Themes\Default\Images\arrow-superfish.png" />
+    <Content Include="App_Themes\Default\Images\bg-hatch.png" />
+    <Content Include="App_Themes\Default\Images\blockquote.png" />
+    <Content Include="App_Themes\Default\Images\ico-breadcrumb-home.png" />
+    <Content Include="App_Themes\Default\Images\ico-breadcrumb-sep.png" />
+    <Content Include="App_Themes\Default\Images\ico-cart.png" />
+    <Content Include="App_Themes\Default\Images\ico-comment-reply.png" />
+    <Content Include="App_Themes\Default\Images\ico-cross.png" />
+    <Content Include="App_Themes\Default\Images\ico-email.png" />
+    <Content Include="App_Themes\Default\Images\ico-error-small.png" />
+    <Content Include="App_Themes\Default\Images\ico-features-image.png" />
+    <Content Include="App_Themes\Default\Images\ico-features-video.png" />
+    <Content Include="App_Themes\Default\Images\ico-info-small.png" />
+    <Content Include="App_Themes\Default\Images\ico-next.png" />
+    <Content Include="App_Themes\Default\Images\ico-prev.png" />
+    <Content Include="App_Themes\Default\Images\ico-rss.png" />
+    <Content Include="App_Themes\Default\Images\ico-search.png" />
+    <Content Include="App_Themes\Default\Images\ico-slider-handle.png" />
+    <Content Include="App_Themes\Default\Images\ico-subscribe-social.png" />
+    <Content Include="App_Themes\Default\Images\ico-success-small.png" />
+    <Content Include="App_Themes\Default\Images\ico-tag.png" />
+    <Content Include="App_Themes\Default\Images\ico-tel.png" />
+    <Content Include="App_Themes\Default\Images\icon_cross_small.png" />
+    <Content Include="App_Themes\Default\Images\icon_tick.png" />
+    <Content Include="App_Themes\Default\Images\logo.png" />
+    <Content Include="App_Themes\Default\Images\sprite.png" />
+    <Content Include="App_Themes\Default\Styles\blue.css" />
+    <Content Include="App_Themes\Default\Styles\blue_light.css" />
+    <Content Include="App_Themes\Default\Styles\custom.css" />
+    <Content Include="App_Themes\Default\Styles\default.css" />
+    <Content Include="App_Themes\Default\Styles\green.css" />
+    <Content Include="App_Themes\Default\Styles\layout.css" />
+    <Content Include="App_Themes\Default\Styles\light.css" />
+    <Content Include="App_Themes\Default\Styles\red.css" />
+    <Content Include="App_Themes\Default\Styles\style.css" />
     <Content Include="Base\Images\ComingSoon\bg_content.png" />
     <Content Include="Base\Images\ComingSoon\bg_gradient_down.png" />
     <Content Include="Base\Images\ComingSoon\bg_gradient_up.png" />
@@ -167,6 +204,7 @@
     <Content Include="Base\Images\ComingSoon\subscribe.png" />
     <Content Include="Base\Images\ComingSoon\twitter.png" />
     <Content Include="Base\Scripts\designer\studio.js" />
+    <Content Include="App_Themes\Default\Scripts\general.js" />
     <Content Include="Base\Scripts\jquery-1.4.4-vsdoc.js" />
     <Content Include="Base\Scripts\jquery-1.4.4.js" />
     <Content Include="Base\Scripts\jquery-1.4.4.min.js" />
@@ -196,7 +234,9 @@
     <Content Include="Base\Scripts\mylibs\kinetic-v3.8.3.min.js" />
     <Content Include="Base\Scripts\mylibs\openid-jquery.js" />
     <Content Include="Base\Scripts\plugins.js" />
+    <Content Include="App_Themes\Default\Scripts\respond-IE.js" />
     <Content Include="Base\Scripts\script.js" />
+    <Content Include="App_Themes\Default\Scripts\third-party.js" />
     <Content Include="Base\Styles\ComingSoon\black.css" />
     <Content Include="Base\Styles\ComingSoon\blue.css" />
     <Content Include="Base\Styles\ComingSoon\reset.css" />
@@ -238,6 +278,15 @@
     <Folder Include="App_Data\" />
     <Folder Include="App_Themes\Classic\Scripts\" />
     <Folder Include="Base\Scripts\ComingSoon\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Themes\Default\Styles\blue.less" />
+    <None Include="App_Themes\Default\Styles\blue_light.less" />
+    <None Include="App_Themes\Default\Styles\green.less" />
+    <None Include="App_Themes\Default\Styles\layout.less" />
+    <None Include="App_Themes\Default\Styles\light.less" />
+    <None Include="App_Themes\Default\Styles\red.less" />
+    <None Include="App_Themes\Default\Styles\style.less" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

@@ -23,23 +23,25 @@ using System.Runtime.Serialization;
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "DesignGraphicDesign", "Design", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Design), "GraphicDesign", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.GraphicDesign))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "GraphicDesignGraphic", "GraphicDesign", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.GraphicDesign), "Graphic", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Graphic))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "GraphicKeywords", "Graphic", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Graphic), "Keywords", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Keywords))]
-[assembly: EdmRelationshipAttribute("SocialThreadsModel", "ItemWithSizeSize", "ItemWithSize", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.SelectedItem), "Size", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Size))]
-[assembly: EdmRelationshipAttribute("SocialThreadsModel", "ItemWithSizeItem", "ItemWithSize", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.SelectedItem), "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Item))]
-[assembly: EdmRelationshipAttribute("SocialThreadsModel", "DesignItemWithSize", "Design", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Design), "ItemWithSize", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.SelectedItem))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "ItemAvailableSizes", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Item), "AvailableSizes", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.AvailableSize))]
-[assembly: EdmRelationshipAttribute("SocialThreadsModel", "AvailableSizeSize", "AvailableSize", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.AvailableSize), "Size", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Size))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "ItemAvailableColor", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Item), "AvailableColor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.AvailableColor))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "AvailableColorColor", "AvailableColor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.AvailableColor), "Color", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Color))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "ItemManufacturer", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Item), "Manufacturer", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Manufacturer))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "CategoryItem", "Category", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Category), "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Item))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "GraphicDesignPrintLocation", "GraphicDesign", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.GraphicDesign), "PrintLocation", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.PrintLocation))]
-[assembly: EdmRelationshipAttribute("SocialThreadsModel", "OrderDesign", "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Order), "Design", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Design))]
-[assembly: EdmRelationshipAttribute("SocialThreadsModel", "CompanyOrder", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Company), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Order))]
-[assembly: EdmRelationshipAttribute("SocialThreadsModel", "PersonOrder", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Person), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Order))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "AddressTypeAddress", "AddressType", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.AddressType), "Address", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Address))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "PersonAddress", "Person", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Person), "Address", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Address))]
-[assembly: EdmRelationshipAttribute("SocialThreadsModel", "CompanyAddress", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Company), "Address", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Address))]
 [assembly: EdmRelationshipAttribute("SocialThreadsModel", "OrderStatusOrder", "OrderStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.OrderStatus), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Order))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "CompanyOrder", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Company), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.Order))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "CompanyTeamMember", "Company", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Company), "TeamMember", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.TeamMember))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "DesignCustomerOrderItems", "Design", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Design), "CustomerOrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.OrderItem))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "ItemCustomerOrderItems", "Item", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Item), "CustomerOrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.OrderItem))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "CustomerCustomerOrder", "Customer", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Customer), "CustomerOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.CustomerOrder))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "OrderCustomerOrder", "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Order), "CustomerOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.CustomerOrder))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "OrderOrderItems", "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.Order), "OrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.OrderItem))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "CustomerOrderCustomerOrderItem", "CustomerOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.CustomerOrder), "CustomerOrderItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.CustomerOrderItem))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "CustomerOrderItemOrderItem", "CustomerOrderItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.CustomerOrderItem), "OrderItem", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.OrderItem))]
+[assembly: EdmRelationshipAttribute("SocialThreadsModel", "OrderItemPreviewImage", "OrderItem", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(SOC.Entities.OrderItem), "PreviewImage", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(SOC.Entities.PreviewImage))]
 
 #endregion
 
@@ -90,38 +92,6 @@ namespace SOC.Entities
         #endregion
     
         #region ObjectSet Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Person> People
-        {
-            get
-            {
-                if ((_People == null))
-                {
-                    _People = base.CreateObjectSet<Person>("People");
-                }
-                return _People;
-            }
-        }
-        private ObjectSet<Person> _People;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Company> Companies
-        {
-            get
-            {
-                if ((_Companies == null))
-                {
-                    _Companies = base.CreateObjectSet<Company>("Companies");
-                }
-                return _Companies;
-            }
-        }
-        private ObjectSet<Company> _Companies;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -190,22 +160,6 @@ namespace SOC.Entities
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Size> Sizes
-        {
-            get
-            {
-                if ((_Sizes == null))
-                {
-                    _Sizes = base.CreateObjectSet<Size>("Sizes");
-                }
-                return _Sizes;
-            }
-        }
-        private ObjectSet<Size> _Sizes;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<Color> Colors
         {
             get
@@ -266,22 +220,6 @@ namespace SOC.Entities
             }
         }
         private ObjectSet<Keywords> _Keywords;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<SelectedItem> SelectedItems
-        {
-            get
-            {
-                if ((_SelectedItems == null))
-                {
-                    _SelectedItems = base.CreateObjectSet<SelectedItem>("SelectedItems");
-                }
-                return _SelectedItems;
-            }
-        }
-        private ObjectSet<SelectedItem> _SelectedItems;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -410,25 +348,105 @@ namespace SOC.Entities
             }
         }
         private ObjectSet<OrderStatus> _OrderStatus;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Company> Companies
+        {
+            get
+            {
+                if ((_Companies == null))
+                {
+                    _Companies = base.CreateObjectSet<Company>("Companies");
+                }
+                return _Companies;
+            }
+        }
+        private ObjectSet<Company> _Companies;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Person> People
+        {
+            get
+            {
+                if ((_People == null))
+                {
+                    _People = base.CreateObjectSet<Person>("People");
+                }
+                return _People;
+            }
+        }
+        private ObjectSet<Person> _People;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<CustomerOrder> CustomerOrders
+        {
+            get
+            {
+                if ((_CustomerOrders == null))
+                {
+                    _CustomerOrders = base.CreateObjectSet<CustomerOrder>("CustomerOrders");
+                }
+                return _CustomerOrders;
+            }
+        }
+        private ObjectSet<CustomerOrder> _CustomerOrders;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<OrderItem> OrderItems1
+        {
+            get
+            {
+                if ((_OrderItems1 == null))
+                {
+                    _OrderItems1 = base.CreateObjectSet<OrderItem>("OrderItems1");
+                }
+                return _OrderItems1;
+            }
+        }
+        private ObjectSet<OrderItem> _OrderItems1;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<CustomerOrderItem> CustomerOrderItems
+        {
+            get
+            {
+                if ((_CustomerOrderItems == null))
+                {
+                    _CustomerOrderItems = base.CreateObjectSet<CustomerOrderItem>("CustomerOrderItems");
+                }
+                return _CustomerOrderItems;
+            }
+        }
+        private ObjectSet<CustomerOrderItem> _CustomerOrderItems;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<PreviewImage> PreviewImages
+        {
+            get
+            {
+                if ((_PreviewImages == null))
+                {
+                    _PreviewImages = base.CreateObjectSet<PreviewImage>("PreviewImages");
+                }
+                return _PreviewImages;
+            }
+        }
+        private ObjectSet<PreviewImage> _PreviewImages;
 
         #endregion
         #region AddTo Methods
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the People EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToPeople(Person person)
-        {
-            base.AddObject("People", person);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Companies EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToCompanies(Company company)
-        {
-            base.AddObject("Companies", company);
-        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the Orders EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -463,14 +481,6 @@ namespace SOC.Entities
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Sizes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToSizes(Size size)
-        {
-            base.AddObject("Sizes", size);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the Colors EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToColors(Color color)
@@ -500,14 +510,6 @@ namespace SOC.Entities
         public void AddToKeywords(Keywords keywords)
         {
             base.AddObject("Keywords", keywords);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the SelectedItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToSelectedItems(SelectedItem selectedItem)
-        {
-            base.AddObject("SelectedItems", selectedItem);
         }
     
         /// <summary>
@@ -572,6 +574,54 @@ namespace SOC.Entities
         public void AddToOrderStatus(OrderStatus orderStatus)
         {
             base.AddObject("OrderStatus", orderStatus);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Companies EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCompanies(Company company)
+        {
+            base.AddObject("Companies", company);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the People EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToPeople(Person person)
+        {
+            base.AddObject("People", person);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the CustomerOrders EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCustomerOrders(CustomerOrder customerOrder)
+        {
+            base.AddObject("CustomerOrders", customerOrder);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the OrderItems1 EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToOrderItems1(OrderItem orderItem)
+        {
+            base.AddObject("OrderItems1", orderItem);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the CustomerOrderItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCustomerOrderItems(CustomerOrderItem customerOrderItem)
+        {
+            base.AddObject("CustomerOrderItems", customerOrderItem);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the PreviewImages EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToPreviewImages(PreviewImage previewImage)
+        {
+            base.AddObject("PreviewImages", previewImage);
         }
 
         #endregion
@@ -894,44 +944,6 @@ namespace SOC.Entities
                 }
             }
         }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CompanyAddress", "Company")]
-        public Company Company
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Company>("SocialThreadsModel.CompanyAddress", "Company").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Company>("SocialThreadsModel.CompanyAddress", "Company").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Company> CompanyReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Company>("SocialThreadsModel.CompanyAddress", "Company");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Company>("SocialThreadsModel.CompanyAddress", "Company", value);
-                }
-            }
-        }
 
         #endregion
     }
@@ -1249,28 +1261,6 @@ namespace SOC.Entities
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Item>("SocialThreadsModel.ItemAvailableSizes", "Item", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "AvailableSizeSize", "Size")]
-        public EntityCollection<Size> Size
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Size>("SocialThreadsModel.AvailableSizeSize", "Size");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Size>("SocialThreadsModel.AvailableSizeSize", "Size", value);
                 }
             }
         }
@@ -1627,18 +1617,378 @@ namespace SOC.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CompanyAddress", "Address")]
-        public EntityCollection<Address> Addresses
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CompanyTeamMember", "TeamMember")]
+        public EntityCollection<TeamMember> TeamMembers
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Address>("SocialThreadsModel.CompanyAddress", "Address");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<TeamMember>("SocialThreadsModel.CompanyTeamMember", "TeamMember");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Address>("SocialThreadsModel.CompanyAddress", "Address", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<TeamMember>("SocialThreadsModel.CompanyTeamMember", "TeamMember", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SocialThreadsModel", Name="Customer")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Customer : Person
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Customer object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="firstName">Initial value of the FirstName property.</param>
+        /// <param name="lastName">Initial value of the LastName property.</param>
+        /// <param name="userName">Initial value of the UserName property.</param>
+        /// <param name="password">Initial value of the Password property.</param>
+        /// <param name="dateJoined">Initial value of the DateJoined property.</param>
+        public static Customer CreateCustomer(global::System.Int32 id, global::System.String firstName, global::System.String lastName, global::System.String userName, global::System.String password, global::System.String dateJoined)
+        {
+            Customer customer = new Customer();
+            customer.Id = id;
+            customer.FirstName = firstName;
+            customer.LastName = lastName;
+            customer.UserName = userName;
+            customer.Password = password;
+            customer.DateJoined = dateJoined;
+            return customer;
+        }
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CustomerCustomerOrder", "CustomerOrder")]
+        public EntityCollection<CustomerOrder> CustomerOrders
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CustomerOrder>("SocialThreadsModel.CustomerCustomerOrder", "CustomerOrder");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CustomerOrder>("SocialThreadsModel.CustomerCustomerOrder", "CustomerOrder", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SocialThreadsModel", Name="CustomerOrder")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class CustomerOrder : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new CustomerOrder object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        public static CustomerOrder CreateCustomerOrder(global::System.Int32 id)
+        {
+            CustomerOrder customerOrder = new CustomerOrder();
+            customerOrder.Id = id;
+            return customerOrder;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CustomerCustomerOrder", "Customer")]
+        public Customer Customer
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("SocialThreadsModel.CustomerCustomerOrder", "Customer").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("SocialThreadsModel.CustomerCustomerOrder", "Customer").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Customer> CustomerReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Customer>("SocialThreadsModel.CustomerCustomerOrder", "Customer");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Customer>("SocialThreadsModel.CustomerCustomerOrder", "Customer", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderCustomerOrder", "Order")]
+        public Order Order
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("SocialThreadsModel.OrderCustomerOrder", "Order").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("SocialThreadsModel.OrderCustomerOrder", "Order").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Order> OrderReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("SocialThreadsModel.OrderCustomerOrder", "Order");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Order>("SocialThreadsModel.OrderCustomerOrder", "Order", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CustomerOrderCustomerOrderItem", "CustomerOrderItem")]
+        public EntityCollection<CustomerOrderItem> CustomerOrderItems
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CustomerOrderItem>("SocialThreadsModel.CustomerOrderCustomerOrderItem", "CustomerOrderItem");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CustomerOrderItem>("SocialThreadsModel.CustomerOrderCustomerOrderItem", "CustomerOrderItem", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SocialThreadsModel", Name="CustomerOrderItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class CustomerOrderItem : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new CustomerOrderItem object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="quantity">Initial value of the Quantity property.</param>
+        public static CustomerOrderItem CreateCustomerOrderItem(global::System.Int32 id, global::System.Int32 quantity)
+        {
+            CustomerOrderItem customerOrderItem = new CustomerOrderItem();
+            customerOrderItem.Id = id;
+            customerOrderItem.Quantity = quantity;
+            return customerOrderItem;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Quantity
+        {
+            get
+            {
+                return _Quantity;
+            }
+            set
+            {
+                OnQuantityChanging(value);
+                ReportPropertyChanging("Quantity");
+                _Quantity = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Quantity");
+                OnQuantityChanged();
+            }
+        }
+        private global::System.Int32 _Quantity;
+        partial void OnQuantityChanging(global::System.Int32 value);
+        partial void OnQuantityChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CustomerOrderCustomerOrderItem", "CustomerOrder")]
+        public CustomerOrder CustomerOrder
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerOrder>("SocialThreadsModel.CustomerOrderCustomerOrderItem", "CustomerOrder").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerOrder>("SocialThreadsModel.CustomerOrderCustomerOrderItem", "CustomerOrder").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<CustomerOrder> CustomerOrderReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerOrder>("SocialThreadsModel.CustomerOrderCustomerOrderItem", "CustomerOrder");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CustomerOrder>("SocialThreadsModel.CustomerOrderCustomerOrderItem", "CustomerOrder", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CustomerOrderItemOrderItem", "OrderItem")]
+        public EntityCollection<OrderItem> OrderItems
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrderItem>("SocialThreadsModel.CustomerOrderItemOrderItem", "OrderItem");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrderItem>("SocialThreadsModel.CustomerOrderItemOrderItem", "OrderItem", value);
                 }
             }
         }
@@ -1729,56 +2079,18 @@ namespace SOC.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "DesignItemWithSize", "ItemWithSize")]
-        public EntityCollection<SelectedItem> ItemWithSizes
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "DesignCustomerOrderItems", "CustomerOrderItems")]
+        public EntityCollection<OrderItem> CustomerOrderItems
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<SelectedItem>("SocialThreadsModel.DesignItemWithSize", "ItemWithSize");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrderItem>("SocialThreadsModel.DesignCustomerOrderItems", "CustomerOrderItems");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<SelectedItem>("SocialThreadsModel.DesignItemWithSize", "ItemWithSize", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderDesign", "Order")]
-        public Order Order
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("SocialThreadsModel.OrderDesign", "Order").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("SocialThreadsModel.OrderDesign", "Order").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Order> OrderReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("SocialThreadsModel.OrderDesign", "Order");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Order>("SocialThreadsModel.OrderDesign", "Order", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrderItem>("SocialThreadsModel.DesignCustomerOrderItems", "CustomerOrderItems", value);
                 }
             }
         }
@@ -2387,44 +2699,6 @@ namespace SOC.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "ItemWithSizeItem", "ItemWithSize")]
-        public SelectedItem SelectedItem
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SelectedItem>("SocialThreadsModel.ItemWithSizeItem", "ItemWithSize").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SelectedItem>("SocialThreadsModel.ItemWithSizeItem", "ItemWithSize").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<SelectedItem> SelectedItemReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SelectedItem>("SocialThreadsModel.ItemWithSizeItem", "ItemWithSize");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SelectedItem>("SocialThreadsModel.ItemWithSizeItem", "ItemWithSize", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "ItemAvailableSizes", "AvailableSizes")]
         public EntityCollection<AvailableSize> AvailableSizes
         {
@@ -2519,6 +2793,28 @@ namespace SOC.Entities
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("SocialThreadsModel.CategoryItem", "Category", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "ItemCustomerOrderItems", "CustomerOrderItems")]
+        public EntityCollection<OrderItem> CustomerOrderItems
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrderItem>("SocialThreadsModel.ItemCustomerOrderItems", "CustomerOrderItems");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrderItem>("SocialThreadsModel.ItemCustomerOrderItems", "CustomerOrderItems", value);
                 }
             }
         }
@@ -2831,18 +3127,34 @@ namespace SOC.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderDesign", "Design")]
-        public EntityCollection<Design> Designs
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderStatusOrder", "OrderStatus")]
+        public OrderStatus OrderStatus
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Design>("SocialThreadsModel.OrderDesign", "Design");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("SocialThreadsModel.OrderStatusOrder", "OrderStatus").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("SocialThreadsModel.OrderStatusOrder", "OrderStatus").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<OrderStatus> OrderStatusReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("SocialThreadsModel.OrderStatusOrder", "OrderStatus");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Design>("SocialThreadsModel.OrderDesign", "Design", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrderStatus>("SocialThreadsModel.OrderStatusOrder", "OrderStatus", value);
                 }
             }
         }
@@ -2891,34 +3203,18 @@ namespace SOC.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "PersonOrder", "Person")]
-        public Person Person
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderCustomerOrder", "CustomerOrder")]
+        public EntityCollection<CustomerOrder> CustomerOrders
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("SocialThreadsModel.PersonOrder", "Person").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("SocialThreadsModel.PersonOrder", "Person").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Person> PersonReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Person>("SocialThreadsModel.PersonOrder", "Person");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<CustomerOrder>("SocialThreadsModel.OrderCustomerOrder", "CustomerOrder");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Person>("SocialThreadsModel.PersonOrder", "Person", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<CustomerOrder>("SocialThreadsModel.OrderCustomerOrder", "CustomerOrder", value);
                 }
             }
         }
@@ -2929,16 +3225,96 @@ namespace SOC.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderStatusOrder", "OrderStatus")]
-        public OrderStatus OrderStatu
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderOrderItems", "OrderItems")]
+        public EntityCollection<OrderItem> OrderItems
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("SocialThreadsModel.OrderStatusOrder", "OrderStatus").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<OrderItem>("SocialThreadsModel.OrderOrderItems", "OrderItems");
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("SocialThreadsModel.OrderStatusOrder", "OrderStatus").Value = value;
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<OrderItem>("SocialThreadsModel.OrderOrderItems", "OrderItems", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SocialThreadsModel", Name="OrderItem")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class OrderItem : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new OrderItem object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        public static OrderItem CreateOrderItem(global::System.Int32 id)
+        {
+            OrderItem orderItem = new OrderItem();
+            orderItem.Id = id;
+            return orderItem;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "DesignCustomerOrderItems", "Design")]
+        public Design Design
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Design>("SocialThreadsModel.DesignCustomerOrderItems", "Design").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Design>("SocialThreadsModel.DesignCustomerOrderItems", "Design").Value = value;
             }
         }
         /// <summary>
@@ -2946,17 +3322,153 @@ namespace SOC.Entities
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<OrderStatus> OrderStatuReference
+        public EntityReference<Design> DesignReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("SocialThreadsModel.OrderStatusOrder", "OrderStatus");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Design>("SocialThreadsModel.DesignCustomerOrderItems", "Design");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrderStatus>("SocialThreadsModel.OrderStatusOrder", "OrderStatus", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Design>("SocialThreadsModel.DesignCustomerOrderItems", "Design", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "ItemCustomerOrderItems", "Item")]
+        public Item Item
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("SocialThreadsModel.ItemCustomerOrderItems", "Item").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("SocialThreadsModel.ItemCustomerOrderItems", "Item").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Item> ItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Item>("SocialThreadsModel.ItemCustomerOrderItems", "Item");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Item>("SocialThreadsModel.ItemCustomerOrderItems", "Item", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderOrderItems", "Order")]
+        public Order Order
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("SocialThreadsModel.OrderOrderItems", "Order").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("SocialThreadsModel.OrderOrderItems", "Order").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<Order> OrderReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("SocialThreadsModel.OrderOrderItems", "Order");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Order>("SocialThreadsModel.OrderOrderItems", "Order", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CustomerOrderItemOrderItem", "CustomerOrderItem")]
+        public CustomerOrderItem CustomerOrderItem
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerOrderItem>("SocialThreadsModel.CustomerOrderItemOrderItem", "CustomerOrderItem").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerOrderItem>("SocialThreadsModel.CustomerOrderItemOrderItem", "CustomerOrderItem").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<CustomerOrderItem> CustomerOrderItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<CustomerOrderItem>("SocialThreadsModel.CustomerOrderItemOrderItem", "CustomerOrderItem");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<CustomerOrderItem>("SocialThreadsModel.CustomerOrderItemOrderItem", "CustomerOrderItem", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderItemPreviewImage", "PreviewImage")]
+        public EntityCollection<PreviewImage> PreviewImages
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<PreviewImage>("SocialThreadsModel.OrderItemPreviewImage", "PreviewImage");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<PreviewImage>("SocialThreadsModel.OrderItemPreviewImage", "PreviewImage", value);
                 }
             }
         }
@@ -3076,6 +3588,8 @@ namespace SOC.Entities
     [EdmEntityTypeAttribute(NamespaceName="SocialThreadsModel", Name="Person")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
+    [KnownTypeAttribute(typeof(TeamMember))]
+    [KnownTypeAttribute(typeof(Customer))]
     public partial class Person : EntityObject
     {
         #region Factory Method
@@ -3086,12 +3600,18 @@ namespace SOC.Entities
         /// <param name="id">Initial value of the Id property.</param>
         /// <param name="firstName">Initial value of the FirstName property.</param>
         /// <param name="lastName">Initial value of the LastName property.</param>
-        public static Person CreatePerson(global::System.Int32 id, global::System.String firstName, global::System.String lastName)
+        /// <param name="userName">Initial value of the UserName property.</param>
+        /// <param name="password">Initial value of the Password property.</param>
+        /// <param name="dateJoined">Initial value of the DateJoined property.</param>
+        public static Person CreatePerson(global::System.Int32 id, global::System.String firstName, global::System.String lastName, global::System.String userName, global::System.String password, global::System.String dateJoined)
         {
             Person person = new Person();
             person.Id = id;
             person.FirstName = firstName;
             person.LastName = lastName;
+            person.UserName = userName;
+            person.Password = password;
+            person.DateJoined = dateJoined;
             return person;
         }
 
@@ -3172,32 +3692,82 @@ namespace SOC.Entities
         private global::System.String _LastName;
         partial void OnLastNameChanging(global::System.String value);
         partial void OnLastNameChanged();
-
-        #endregion
-    
-        #region Navigation Properties
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "PersonOrder", "Order")]
-        public EntityCollection<Order> Orders
+        public global::System.String UserName
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("SocialThreadsModel.PersonOrder", "Order");
+                return _UserName;
             }
             set
             {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("SocialThreadsModel.PersonOrder", "Order", value);
-                }
+                OnUserNameChanging(value);
+                ReportPropertyChanging("UserName");
+                _UserName = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("UserName");
+                OnUserNameChanged();
             }
         }
+        private global::System.String _UserName;
+        partial void OnUserNameChanging(global::System.String value);
+        partial void OnUserNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Password
+        {
+            get
+            {
+                return _Password;
+            }
+            set
+            {
+                OnPasswordChanging(value);
+                ReportPropertyChanging("Password");
+                _Password = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Password");
+                OnPasswordChanged();
+            }
+        }
+        private global::System.String _Password;
+        partial void OnPasswordChanging(global::System.String value);
+        partial void OnPasswordChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String DateJoined
+        {
+            get
+            {
+                return _DateJoined;
+            }
+            set
+            {
+                OnDateJoinedChanging(value);
+                ReportPropertyChanging("DateJoined");
+                _DateJoined = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("DateJoined");
+                OnDateJoinedChanged();
+            }
+        }
+        private global::System.String _DateJoined;
+        partial void OnDateJoinedChanging(global::System.String value);
+        partial void OnDateJoinedChanged();
+
+        #endregion
+    
+        #region Navigation Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -3217,6 +3787,128 @@ namespace SOC.Entities
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Address>("SocialThreadsModel.PersonAddress", "Address", value);
+                }
+            }
+        }
+
+        #endregion
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="SocialThreadsModel", Name="PreviewImage")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class PreviewImage : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new PreviewImage object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="fileName">Initial value of the FileName property.</param>
+        public static PreviewImage CreatePreviewImage(global::System.Int32 id, global::System.String fileName)
+        {
+            PreviewImage previewImage = new PreviewImage();
+            previewImage.Id = id;
+            previewImage.FileName = fileName;
+            return previewImage;
+        }
+
+        #endregion
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int32 _Id;
+        partial void OnIdChanging(global::System.Int32 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String FileName
+        {
+            get
+            {
+                return _FileName;
+            }
+            set
+            {
+                OnFileNameChanging(value);
+                ReportPropertyChanging("FileName");
+                _FileName = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("FileName");
+                OnFileNameChanged();
+            }
+        }
+        private global::System.String _FileName;
+        partial void OnFileNameChanging(global::System.String value);
+        partial void OnFileNameChanged();
+
+        #endregion
+    
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "OrderItemPreviewImage", "OrderItem")]
+        public OrderItem OrderItem
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderItem>("SocialThreadsModel.OrderItemPreviewImage", "OrderItem").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderItem>("SocialThreadsModel.OrderItemPreviewImage", "OrderItem").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<OrderItem> OrderItemReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderItem>("SocialThreadsModel.OrderItemPreviewImage", "OrderItem");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrderItem>("SocialThreadsModel.OrderItemPreviewImage", "OrderItem", value);
                 }
             }
         }
@@ -3349,79 +4041,62 @@ namespace SOC.Entities
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="SocialThreadsModel", Name="SelectedItem")]
+    [EdmEntityTypeAttribute(NamespaceName="SocialThreadsModel", Name="TeamMember")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
-    public partial class SelectedItem : EntityObject
+    public partial class TeamMember : Person
     {
         #region Factory Method
     
         /// <summary>
-        /// Create a new SelectedItem object.
+        /// Create a new TeamMember object.
         /// </summary>
         /// <param name="id">Initial value of the Id property.</param>
-        /// <param name="price">Initial value of the Price property.</param>
-        public static SelectedItem CreateSelectedItem(global::System.Int32 id, global::System.String price)
+        /// <param name="firstName">Initial value of the FirstName property.</param>
+        /// <param name="lastName">Initial value of the LastName property.</param>
+        /// <param name="userName">Initial value of the UserName property.</param>
+        /// <param name="password">Initial value of the Password property.</param>
+        /// <param name="dateJoined">Initial value of the DateJoined property.</param>
+        /// <param name="role">Initial value of the Role property.</param>
+        public static TeamMember CreateTeamMember(global::System.Int32 id, global::System.String firstName, global::System.String lastName, global::System.String userName, global::System.String password, global::System.String dateJoined, global::System.String role)
         {
-            SelectedItem selectedItem = new SelectedItem();
-            selectedItem.Id = id;
-            selectedItem.Price = price;
-            return selectedItem;
+            TeamMember teamMember = new TeamMember();
+            teamMember.Id = id;
+            teamMember.FirstName = firstName;
+            teamMember.LastName = lastName;
+            teamMember.UserName = userName;
+            teamMember.Password = password;
+            teamMember.DateJoined = dateJoined;
+            teamMember.Role = role;
+            return teamMember;
         }
 
         #endregion
         #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Id
-        {
-            get
-            {
-                return _Id;
-            }
-            set
-            {
-                if (_Id != value)
-                {
-                    OnIdChanging(value);
-                    ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Id");
-                    OnIdChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Id;
-        partial void OnIdChanging(global::System.Int32 value);
-        partial void OnIdChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.String Price
+        public global::System.String Role
         {
             get
             {
-                return _Price;
+                return _Role;
             }
             set
             {
-                OnPriceChanging(value);
-                ReportPropertyChanging("Price");
-                _Price = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Price");
-                OnPriceChanged();
+                OnRoleChanging(value);
+                ReportPropertyChanging("Role");
+                _Role = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Role");
+                OnRoleChanged();
             }
         }
-        private global::System.String _Price;
-        partial void OnPriceChanging(global::System.String value);
-        partial void OnPriceChanged();
+        private global::System.String _Role;
+        partial void OnRoleChanging(global::System.String value);
+        partial void OnRoleChanged();
 
         #endregion
     
@@ -3433,60 +4108,16 @@ namespace SOC.Entities
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "ItemWithSizeSize", "Size")]
-        public EntityCollection<Size> Size
+        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "CompanyTeamMember", "Company")]
+        public Company Company
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Size>("SocialThreadsModel.ItemWithSizeSize", "Size");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Company>("SocialThreadsModel.CompanyTeamMember", "Company").Value;
             }
             set
             {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Size>("SocialThreadsModel.ItemWithSizeSize", "Size", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "ItemWithSizeItem", "Item")]
-        public EntityCollection<Item> Item
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Item>("SocialThreadsModel.ItemWithSizeItem", "Item");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Item>("SocialThreadsModel.ItemWithSizeItem", "Item", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "DesignItemWithSize", "Design")]
-        public Design Design
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Design>("SocialThreadsModel.DesignItemWithSize", "Design").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Design>("SocialThreadsModel.DesignItemWithSize", "Design").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Company>("SocialThreadsModel.CompanyTeamMember", "Company").Value = value;
             }
         }
         /// <summary>
@@ -3494,151 +4125,17 @@ namespace SOC.Entities
         /// </summary>
         [BrowsableAttribute(false)]
         [DataMemberAttribute()]
-        public EntityReference<Design> DesignReference
+        public EntityReference<Company> CompanyReference
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Design>("SocialThreadsModel.DesignItemWithSize", "Design");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Company>("SocialThreadsModel.CompanyTeamMember", "Company");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Design>("SocialThreadsModel.DesignItemWithSize", "Design", value);
-                }
-            }
-        }
-
-        #endregion
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="SocialThreadsModel", Name="Size")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Size : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new Size object.
-        /// </summary>
-        /// <param name="id">Initial value of the Id property.</param>
-        public static Size CreateSize(global::System.Int32 id)
-        {
-            Size size = new Size();
-            size.Id = id;
-            return size;
-        }
-
-        #endregion
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 Id
-        {
-            get
-            {
-                return _Id;
-            }
-            set
-            {
-                if (_Id != value)
-                {
-                    OnIdChanging(value);
-                    ReportPropertyChanging("Id");
-                    _Id = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("Id");
-                    OnIdChanged();
-                }
-            }
-        }
-        private global::System.Int32 _Id;
-        partial void OnIdChanging(global::System.Int32 value);
-        partial void OnIdChanged();
-
-        #endregion
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "ItemWithSizeSize", "ItemWithSize")]
-        public SelectedItem SelectedItems
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SelectedItem>("SocialThreadsModel.ItemWithSizeSize", "ItemWithSize").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SelectedItem>("SocialThreadsModel.ItemWithSizeSize", "ItemWithSize").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<SelectedItem> SelectedItemsReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<SelectedItem>("SocialThreadsModel.ItemWithSizeSize", "ItemWithSize");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<SelectedItem>("SocialThreadsModel.ItemWithSizeSize", "ItemWithSize", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("SocialThreadsModel", "AvailableSizeSize", "AvailableSize")]
-        public AvailableSize AvailableSizes
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AvailableSize>("SocialThreadsModel.AvailableSizeSize", "AvailableSize").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AvailableSize>("SocialThreadsModel.AvailableSizeSize", "AvailableSize").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<AvailableSize> AvailableSizesReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<AvailableSize>("SocialThreadsModel.AvailableSizeSize", "AvailableSize");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<AvailableSize>("SocialThreadsModel.AvailableSizeSize", "AvailableSize", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Company>("SocialThreadsModel.CompanyTeamMember", "Company", value);
                 }
             }
         }

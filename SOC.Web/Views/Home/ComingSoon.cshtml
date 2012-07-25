@@ -1,4 +1,5 @@
-﻿@{
+﻿@model SOC.Web.Models.ViewModels.Base.BaseViewModel
+@{
     Layout = null;
 }
 
@@ -8,15 +9,15 @@
 <html class="no-js">
 <head>
   <meta charset="utf-8">
-  
+  <meta name="Screen Printing - Social Threads" content="Screen Printing Apparel Ecommerce Order Form Custom" />
   <!-- Page title -->
-  <title>Social-Threads Coming Soon</title>
+  <title>Social-Threads</title>
 
   <link rel="shortcut icon" href="favicon.png">
   
   <!-- Stylesheet -->
-  <link rel="stylesheet" href="http://localhost:56221/Base/Styles/ComingSoon/style.css"> <!-- Regular stylesheet -->
-  <link rel="stylesheet" href="http://localhost:56221/Base/Styles/ComingSoon/black.css"> <!-- Pick color scheme (black.css, blue.css, brown.css, dark_green.css, green.css, white.css)-->
+  <link rel="stylesheet" href="@Model.URLs.CDN/Styles/ComingSoon/style.css"> <!-- Regular stylesheet -->
+  <link rel="stylesheet" href="@Model.URLs.CDN/Styles/ComingSoon/black.css"> <!-- Pick color scheme (black.css, blue.css, brown.css, dark_green.css, green.css, white.css)-->
   
   <!-- Fonts -->
   <link href="http://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet" type="text/css">
@@ -24,8 +25,8 @@
   <link href="http://fonts.googleapis.com/css?family=Cantarell:regular,italic,bold" rel="stylesheet" type="text/css">
   
   <!-- JavaScript -->
-  <script src="http://localhost:56221/Base/Scripts/jquery-1.4.1.min.js"></script> <!-- Load jQuery library -->
-  <script src="http://localhost:56221/Base/Scripts/modernizr-1.7.min.js"></script> <!-- Load Modernizr -->
+  <script src="@Model.URLs.CDN/Scripts/jquery-1.4.1.min.js"></script> <!-- Load jQuery library -->
+  <script src="@Model.URLs.CDN/Scripts/modernizr-1.7.min.js"></script> <!-- Load Modernizr -->
   <script>
       $(function () {
 
@@ -66,10 +67,10 @@
 		  
 		  <!-- Progress -->
 		  <script>
-		      $(function () {
-		          $("#progressbar").animate({ width: $(".progress h2").text() }, 2000);
-		      });
-		  </script>
+  		    $(function () {
+  		        $("#progressbar").animate({ width: $(".progress h2").text() }, 2000);
+  		    });
+  		</script>
 		  <section class="progress">
 			<div id="progressbar"></div>
 			<h2>10%</h2> <!-- Set your progress, must be percentage -->
@@ -82,46 +83,41 @@
 			<div class="description_top"></div>
 			<div class="description_content">
 			  <p>Our Goal is Simple.</p>
-                <p>Close the Gaps in Custom Apparel Industry.</p>
-			  <p>This means allowing Screen Printers, Supplies, and Customers to interact more seamlessly than ever before  .</p>
+                <p>Close the gaps in the Custom Apparel Industry.</p>
+			  <p>This means allowing Screen Printers, Suppliers, and Customers to interact more seamlessly than ever before  .</p>
 			</div>
 			<div class="description_bottom"></div>
 		  </section>		  
 		  <!-- Short description end -->
 		  
-		  
-
-		  
-		  
 		  <!-- Subscription form -->
 		  <script>
-		      $(function () {
-		          $(".subscribe input.submit").click(function (event) {
-		              event.preventDefault();
-		              event.returnValue = false;
-		              $.ajax({
-		                  type: "POST",
-		                  url: "subscribe.php",
-		                  data: { email: $(".subscribe input[name=email]").val() },
-		                  success: function (data) {
-		                      alert(data + 'a');
-		                      if (data == "successful") {
-		                          $(".subscribe p").html("Thanks for your interest! We will let you know.").slideDown();
-		                      } else if (data == "already_subscribed") {
-		                          $(".subscribe p").html("This email is already subscribed.").slideDown();
-		                      } else if (data == "invalid_email") {
-		                          $(".subscribe p").html("This email is invalid.").slideDown();
-		                      } else {
-		                          $(".subscribe p").html("Something went wrong. Please try again.").slideDown();
-		                      }
-		                  },
-		                  error: function () {
-		                      $(".subscribe p").html("Subscription is not available.").slideDown();
-		                  }
-		              });
-		          });
-		      });
-		  </script>
+  		    $(function () {
+  		        $(".subscribe input.submit").click(function (event) {
+  		            event.preventDefault();
+  		            event.returnValue = false;
+  		            $.ajax({
+  		                type: "POST",
+  		                url: "account/subscribe",
+  		                data: { email: $(".subscribe input[name=email]").val() },
+  		                success: function (data) {
+  		                    if (data == "successful") {
+  		                        $(".subscribe p").html("Thanks for your interest! We will let you know.").slideDown();
+  		                    } else if (data == "already_subscribed") {
+  		                        $(".subscribe p").html("This email is already subscribed.").slideDown();
+  		                    } else if (data == "invalid_email") {
+  		                        $(".subscribe p").html("This email is invalid.").slideDown();
+  		                    } else {
+  		                        $(".subscribe p").html("Something went wrong. Please try again.").slideDown();
+  		                    }
+  		                },
+  		                error: function () {
+  		                    $(".subscribe p").html("Subscription is not available.").slideDown();
+  		                }
+  		            });
+  		        });
+  		    });
+  		</script>
 		  <section class="subscribe">
 			<p></p>
 			<form method="post">
@@ -134,19 +130,19 @@
 		  
 		  <!-- More info, part 1 -->
 		  <script>
-		      $(function () {
-		          $("#show_more_info").click(function () {
-		              $("#main_page").fadeOut("slow", function () {
-		                  $("#more_info_page").fadeIn("slow");
-		              });
-		          });
-		          $("#show_main").click(function () {
-		              $("#more_info_page").fadeOut("slow", function () {
-		                  $("#main_page").fadeIn("slow");
-		              });
-		          });
-		      });
-		  </script>
+  		    $(function () {
+  		        $("#show_more_info").click(function () {
+  		            $("#main_page").fadeOut("slow", function () {
+  		                $("#more_info_page").fadeIn("slow");
+  		            });
+  		        });
+  		        $("#show_main").click(function () {
+  		            $("#more_info_page").fadeOut("slow", function () {
+  		                $("#main_page").fadeIn("slow");
+  		            });
+  		        });
+  		    });
+  		</script>
 		  <section class="more_info">
 			<a href="#" id="show_more_info" class="button">More information</a>
 		  </section>
@@ -169,30 +165,29 @@
 		<h2>About</h2>
 		
 		<!-- First paragraph -->		
-		<p>We started screen printing in 2007 as a fun way to make some extra money.  With no real solution for a whole list of hurdles to get started, we set out to solve many of the issues we faced and wanted to share it with everyone else.</p>
-		<p>Drop us a comment below with some of the issues you have and we will do our best to help you out.</p>
+		<p>We started screen printing in 2007 as a fun way to make some extra money.  With no real solution for a whole list of hurdles to get started, we set out to solve many of the challenges.</p>
 		<!-- First paragraph end -->
 		
 	  
 	
 	  	
 		<!-- Social icons -->
-		<h3>Social</h3>
+@*		<h3>Social</h3>
 		<a href=""><img src="http://localhost:56221/Base/Images/ComingSoon/facebook.png" alt="Facebook" class="social" /></a>
 		<a href=""><img src="http://localhost:56221/Base/Images/twitter.png" alt="Twitter" class="social" /></a>
-		<a href=""><img src="http://localhost:56221/Base/Images/linkedin.png" alt="LinkedIn" class="social" /></a>
+		<a href=""><img src="http://localhost:56221/Base/Images/linkedin.png" alt="LinkedIn" class="social" /></a>*@
 		<!-- Social icons end -->
 	  
 	  
 		<!-- Contact form -->
-		<script>
+@*		<script>
 		    $(function () {
 		        $("#more_info_page input.submit").click(function (event) {
 		            event.preventDefault();
 		            event.returnValue = false;
 		            $.ajax({
 		                type: "POST",
-		                url: "contact.php",
+		                url: "account/contact",
 		                data: {
 		                    email: $("#more_info_page input[name=email]").val(),
 		                    text: $("#more_info_page textarea[name=text]").val()
@@ -219,7 +214,7 @@
 		  <input name="email" placeholder="Your e-mail">
 		  <textarea name="text"></textarea>
 		  <input type="submit" class="submit" value="Send a message">
-		</form>
+		</form>*@
 		<!-- Contact form end -->
 		
 		
@@ -231,7 +226,7 @@
 	  <section class="contact">
 	  
 		<h2>Contact</h2>
-		
+
 		<!-- First person contact card -->
 		<p class="person vcard">
 		 @* <img src="img/avatar.png" alt="John Doe" class="photo" />*@
@@ -261,6 +256,15 @@
 	</div>
 	<!-- More info, part 2 end -->
 	
-  </div></div>  
+                    </div></div>  
+
+        <script type="text/javascript">
+  var uvOptions = {};
+  (function() {
+    var uv = document.createElement('script'); uv.type = 'text/javascript'; uv.async = true;
+    uv.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'widget.uservoice.com/F2GKga0gYmzGLLNGe9aKg.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
+  })();
+</script>
 </body>
 </html>

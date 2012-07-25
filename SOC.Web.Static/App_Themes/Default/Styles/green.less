@@ -1,0 +1,683 @@
+/* GREEN ALT STYLE */
+/* Imports */
+@import url(../css/mixins.less);
+// VARIABLES
+// Colors
+@color_links: #c42323; // Links
+@color_body: #333; // Body Copy
+@color_contrast: #c42323;
+@color_contrast2: #c42323;
+// Borders
+@border_main: #b7c0c9;
+// Backgrounds
+@bg_light: #f1f9f6;
+@bg_dark: #96b49d;
+// Fonts
+@sans: sans-serif;
+@serif: Georgia, serif;
+// Google fonts - These are also defined in Theme Setup (theme-actions.php)
+@sans_google: "Bitter", sans-serif;
+
+body  {  color: @color_body; font-family: @sans; }
+h1, h2, h3, h4, h5, h6  {
+	margin: 0; color: darken(@color_body, 20%); font-weight:normal;
+	font-family: @sans_google;
+}
+hr { background-color: @border_main; border:0; height: 1px; margin-bottom: 20px; }
+input, textarea { padding: 5px; border-color: darken(@border_main, 8%) @border_main @border_main darken(@border_main, 8%); border-width:1px; border-style:solid; color: @color_body; }
+a { 
+	color: @color_links; 
+	&:hover { color: @color_links - #222; }
+}
+#wrapper  { border-top: 1px solid @border_main; }
+#navigation{ 
+	font-family: @sans_google;
+	.mini-cart {
+		> li  {
+			.box_shadow(0,0,0,1px,rgba(0,0,0,0.2));
+			.vertical_gradient(@color_contrast2, darken(@color_contrast2, 10%));
+			&:hover  { .vertical_gradient(lighten(@color_contrast2, 10%), @color_contrast2); }
+		}
+		a.cart-parent {
+			span { font-family: @sans_google; }			
+		}
+	}
+}
+.nav {
+	a {
+		color: lighten(@bg_dark, 70%);
+		text-shadow: -1px -1px 0 rgba(0,0,0,0.2);
+		&:hover { text-shadow: 1px 1px 0 rgba(0,0,0,0.4); background: lighten(@bg_dark, 2%); background: rgba(255,255,255,0.07); }
+	}
+	li {
+		&.current_page_item, &.current_page_parent, &.current-menu-ancestor, &.current-cat, &.li.current-menu-item, &.sfHover {
+			a { text-shadow: 1px 1px 0 rgba(0,0,0,0.4); background: lighten(@bg_dark, 2%); background: rgba(255,255,255,0.07);}
+		}
+	}
+}
+#navigation .nav  {
+	li ul  {
+	    li {
+	         a {
+	         	color: lighten(@bg_dark, 70%);
+	         	&:hover { text-shadow: 1px 1px 0 rgba(0,0,0,0.4); background: lighten(@bg_dark, 2%); background: rgba(255,255,255,0.07); }
+	         }
+	     }
+	}
+}
+#navigation {  border:1px solid darken(@bg_dark, 10%);  .vertical_gradient(@bg_dark,darken(@bg_dark, 10%)); }
+#header {
+	background-color: @bg_light;
+	border-top: 1px solid darken(@bg_dark, 10%);
+	.site-title, .site-description {
+	    color:#000;
+	    a { color: darken(@color_body, 20%); }
+	}
+	.site-description { color: lighten(@color_body, 10%); }
+}
+#homepage-top  {
+	#featured  {
+		li  {
+			img  { border: 1px solid @border_main; }
+			h2  {
+				a  { color: darken(@color_body, 20%); }
+			}
+		}
+	}
+	#popular  {
+		li  {
+			div  {
+				img  {
+					border: 1px solid @border_main;
+					&:hover  { border-color: darken(@border_main, 10%); }
+				}
+				.price  { color: lighten(@color_body, 40%); }	
+			}
+		}
+	}
+	#promo  {
+		.flexslider  {
+			background: @bg_light;
+			border: 3px solid lighten(@border_main, 18%);
+			ul.slides  {
+			    border: 1px solid @border_main;
+			    li  {
+			    	article  {
+			    		font-family: @sans_google;
+			    		h1  {
+			    			a  { color: darken(@color_body, 20%); }
+			    		}
+			    		.excerpt  { color: lighten(@color_body, 50%); }
+			    	}
+			    }
+			}
+		}
+	}
+	.flex-control-nav  {
+		li  {
+			a  { 
+				background: darken(@bg_light, 30%);
+				&:hover, &.active  { background: @bg_dark; }
+			}
+		}
+	}
+	.flex-direction-nav  {
+		a  {
+			border: 1px solid darken(@border_main, 10%);
+			&.prev  { background-color: @bg_light; }
+			&.next  { background-color: @bg_light; }
+			&:hover  { background-color: darken(@bg_light, 5%); }
+		}
+	}
+}
+#features  {
+	background: @bg_light;
+	border: 1px solid @border_main;
+	article  {
+		a  {
+			img.thumb  {
+		   		border: 1px solid @border_main;
+		    	&:hover  { border-color: darken(@border_main, 10%); }
+			}
+			.icon  { background: @bg_dark; border: 1px solid @bg_dark; }
+		}
+		h1 a  { color: @color_body; }
+		p  { color: lighten(@color_body, 7%); }
+	}
+}
+#searchbar  {
+	font-family: @sans_google;
+	border: 1px solid @border_main;
+	.vertical_gradient(@bg_light, darken(@bg_light, 5%));
+	ul  {
+		border-bottom: 1px solid @border_main;
+		li  {
+			border-bottom: 1px solid @border_main;
+			a  { color: @color_body; }
+			&:hover  { background-color: rgba(0,0,0,0.05); }
+			&:last-child  { border-top: 1px solid #fff; }
+		}
+	}
+}
+.breadcrumbs {
+	color: lighten(@color_body, 20%);
+	border: 1px solid @border_main;
+	.vertical_gradient(@bg_light, darken(@bg_light, 5%));
+	a  {
+		color: lighten(@color_body, 20%);
+		&:hover  { color: @color_body; }
+	}
+}
+#footer{
+	color: #fff;
+	background: @bg_dark;
+	a  { color: #fff; }
+}
+#footer-widgets { background: @bg_light; border-top: 1px solid darken(@bg_light, 10%); }
+.archive_header {
+	font-family: @sans_google;
+	border-top: 1px solid lighten(@border_main, 10%);
+	border-bottom: 1px solid lighten(@border_main, 10%);
+	.catrss {
+		a {
+			background: @color_links;
+			border: 1px solid  @color_links;
+			color: #fff;
+			&:hover { background: darken(@color_links, 10%); }
+		}
+	}
+}
+.post, .page  {
+	header h1 {
+		a:link, a:visited { color: darken(@color_body, 20%); }
+	}
+}
+.post, .search-results .page  {
+	border-bottom: 1px solid lighten(@border_main, 10%);
+	.post-meta, .post-more, p.tags {
+		color: lighten(@color_body, 10%);
+		a:link, a:visited  {
+			color: @color_body;
+			&:hover { color:@color_links; }
+		}
+	}
+	.wp-caption {
+		img { border: 1px solid lighten(@border_main, 10%); }
+	}
+}
+.entry, #tab-description {
+	blockquote {
+		color: darken(@color_body, 15%);
+	}
+}
+.nav-entries, .wp-pagenavi, .woo-pagination, #post-entries {
+	color: lighten(@color_body, 20%);
+	border: 1px solid @border_main;
+	.vertical_gradient(@bg_light, darken(@bg_light, 5%));
+}
+.woo-pagination .page-numbers, .nav-entries a span.nav-next, .nav-entries a span.nav-prev, #post-entries a {
+		color: lighten(@color_body, 5%);
+		border:1px solid lighten(@border_main, 5%);
+		.vertical_gradient(@bg_light, darken(@bg_light, 5%));
+		&:hover { border-color: @border_main; }
+		&.current  { background: darken(@bg_light, 20%); color: @bg_dark; }
+}
+#connect { 
+	border:1px solid lighten(@border_main, 5%);
+	background: @bg_light;
+	.col-left  { border-bottom: 1px solid lighten(@border_main, 5%); }
+	.related-posts {
+		ul {
+			li  {
+				a  { color: @color_body; }
+			}
+		}
+	}
+}
+.widget  { 
+	ul {
+		li {
+			a {
+				color: lighten(@color_body, 15%);
+			}
+		}
+	}
+}
+.widget_login, .widget_shopping_cart, .widget_price_filter, .widget_layered_nav  {
+	color: #fff;
+	background: lighten(@bg_dark, 2%);
+	border: 1px solid darken(@bg_dark, 3%);
+	a:link, a:visited  { color: #fff; }
+	h3  { border-bottom: 1px solid darken(@bg_dark, 10%); }
+	.button, .submitbutton {
+	    font-family: @sans;
+	    border: 1px solid darken(@color_contrast2, 20%);
+	    .vertical_gradient(@color_contrast2, darken(@color_contrast2, 10%));
+	    &:hover  { .vertical_gradient(lighten(@color_contrast2, 10%), @color_contrast2); }
+	}
+}
+.widget, .mini-cart {
+	ul.product_list_widget, ul.cart_list {
+		border: 1px solid @border_main;
+		background: @bg_light;
+		li {
+			border-bottom: 1px solid lighten(@border_main, 10%);
+			border-top: 1px solid #fff;
+			a {
+				color: @color_body;
+			}
+		}
+	}
+	
+}
+.widget_login  {
+	form  {
+		label  {
+		}
+		input[type=text], input[type=password]  {
+			border: 1px solid darken(@bg_dark, 3%);
+			background: lighten(@bg_dark, 5%);
+			&:focus  { background: lighten(@bg_dark, 65%); }
+		}
+	}
+}
+.widget_shopping_cart {
+	ul.cart_list  {
+		background: none;
+		border: none;
+		border-top: 1px solid rgba(255,255,255,0.1);
+		border-bottom: 1px solid darken(@bg_dark, 10%);
+	}
+	ul.cart_list li {
+		border-top: 1px solid rgba(255,255,255,0.1);
+	    border-bottom: 1px solid darken(@bg_dark, 10%);
+	    font-family: @sans_google;
+	    a {
+	    	text-shadow: 1px 1px 0 darken(@bg_dark, 10%);
+	    	color: #fff;
+	    }
+	}
+	p.total {
+	    background: darken(@bg_dark, 5%);
+	    border: 1px solid darken(@bg_dark, 10%);
+	}
+}
+.widget_price_filter {
+   .ui-slider .ui-slider-handle { 
+		border:1px solid darken(@bg_dark, 10%);
+	}
+   .ui-slider .ui-slider-range { 
+		border: 1px solid #fff;
+		.vertical_gradient(@bg_light, @bg_light - #222);
+	}
+   .price_slider_wrapper .ui-widget-content { 
+		background: darken(@bg_dark, 5%);
+		border: 1px solid darken(@bg_dark, 10%);
+	}
+}
+.widget_layered_nav {
+	li {
+		.vertical_gradient(lighten(@bg_dark, 15%),lighten(@bg_dark, 10%));
+		border:1px solid @bg_dark;
+		.inset_box_shadow(0,0,1px,0,rgba(255,255,255,0.3));
+		&:hover  { .vertical_gradient(lighten(@bg_dark, 10%),lighten(@bg_dark, 5%)); }
+	}
+}
+#searchform, .searchform {
+    border-color: darken(@border_main, 8%) @border_main @border_main darken(@border_main, 8%); 
+    input.s, #s { color: @color_body; }
+}
+.widget_tag_cloud .tagcloud, .widget_product_tag_cloud .tagcloud  {
+	a  {
+		background: darken(@bg_light, 5%);
+		color: lighten(@color_body, 15%);
+		&:hover { background: darken(@bg_light, 10%); }
+	}
+}
+#wp-calendar{
+	th, td { background: darken(@bg_light, 10%); }
+	td { color: lighten(@color_body, 10%); }
+}
+.widget_woo_blogauthorinfo {
+	.more  {
+		a  {
+			color: @color_body;
+		}
+	}
+}
+.widget_woo_twitter {
+	.back { background: @bg_light; border: 1px solid @border_main; .border_radius(3px); }
+	ul {
+		li {
+			border-bottom: 1px solid @border_main;
+			.time { color: lighten(@color_body, 10%); }
+		}
+	}
+	p {
+		color: lighten(@color_body, 10%);
+		border-top: 1px solid @border_main;
+		.vertical_gradient(darken(@bg_light, 8%), darken(@bg_light, 12%));
+		&:hover  { background: darken(@bg_light, 8%); }
+		a { color: darken(@color_body, 20%); }
+	}
+}
+.widget_woo_embedwidget  {
+	ul.widget-video-list  {
+	    background: @bg_light;
+	    border: 1px solid @border_main;
+	    li  {
+	    	border-top: 1px solid @border_main;
+	    	a  {
+	    		&:hover  {
+	    			.vertical_gradient(darken(@bg_light, 8%), darken(@bg_light, 12%));
+	    		}
+	    	}
+	    	&.active a  { .vertical_gradient(darken(@bg_light, 8%), darken(@bg_light, 12%)); }
+	    }
+	}
+}
+#tabs {	
+	background: darken(@bg_light,10%); border: 1px solid @border_main;
+	ul.wooTabs {
+		li {
+			a {
+				color: lighten(@color_body, 10%);
+				border-right: 1px solid @border_main;
+				&.selected, &:hover { background: @bg_light; }
+			}
+		}
+	}
+	.inside {
+		background: @bg_light;
+		border-top: 1px solid @border_main;
+		#tab-tags {
+			a {
+				background: darken(@bg_light, 5%);
+				color: lighten(@color_body, 10%);
+				&:hover { background: darken(@bg_light, 10%); }
+			}
+		}
+		li {
+			border-bottom:1px solid @border_main;
+			a { color: @color_body; }
+			span.meta { color: lighten(@color_body, 10%); }
+			img.avatar, img.thumbnail {
+				border:1px solid @border_main;
+				&:hover { border-color: darken(@border_main, 10%); }
+			}
+		}
+	}	
+}
+#comments {
+	border-top: 1px solid lighten(@border_main, 10%);
+	.commentlist  { background: lighten(@bg_light, 1%); border: 1px solid lighten(@border_main, 10%); }
+	.comment {
+		.comment-container { border-bottom: 1px solid lighten(@border_main, 10%); }
+		&.bypostauthor .comment-container { .vertical_gradient(@bg_light, darken(@bg_light, 5%)); }
+		.avatar {
+			img { border: 1px solid lighten(@border_main, 5%); }
+		}
+		.reply {
+			a {
+				background-color:  @bg_light;
+				border-color: darken(@border_main, 7%);
+				color: @color_body!important;
+			}
+		}
+	}
+}
+#respond  { 
+	label { color: lighten(@color_body, 10%); }
+	#commentform  {	
+		input.txt, textarea { font-family: @sans; border-color: darken(@border_main, 8%) @border_main @border_main darken(@border_main, 8%); }
+	}
+}
+#archives { 
+	.archives_list {
+		border-left:1px solid @border_main;
+		.date { color: lighten(@color_body, 10%); }
+		.comments {
+			a {
+				color: lighten(@color_body, 15%);
+			}
+		}
+	}
+}
+h3.archive_year { font-family: @sans; color: @color_body; }
+.image-gallery-item img {
+    border:1px solid darken(@bg_light,10%); background:@bg_light; 
+	&:hover { border: 1px solid darken(@bg_light,20%); }
+}
+table {
+	border-top:1px solid @border_main;
+	border-left:1px solid @border_main;
+	th, td {
+		border-bottom:1px solid @border_main;
+		border-right:1px solid @border_main;
+	}
+	th { background: darken(@bg_light, 5%); }
+}
+.quantity {
+	zoom:1;
+	input.qty {
+		font-family: @sans;
+		border:1px solid @border_main;
+	}
+	.plus, .minus {
+		border:1px solid @border_main;
+		.vertical_gradient(@bg_light, darken(@bg_light, 10%));
+		&:hover { background: @bg_light; }
+	}
+}
+.onsale  {
+	border: 1px solid @color_contrast;
+	.vertical_gradient(lighten(@color_contrast, 12%), @color_contrast);
+}
+.woocommerce_message, p.info, li.info, .woocommerce_error {
+	border: 1px solid @border_main;
+	background-color: @bg_light;
+}
+.woocommerce_message {
+	border-color:@border_main;
+	background-color: @bg_dark;
+	border: 1px solid @bg_dark;
+	.button {
+	    font-family: @sans;
+	    border: 1px solid darken(@color_contrast2, 20%);
+	    .vertical_gradient(@color_contrast2, darken(@color_contrast2, 10%));
+	    &:hover  { .vertical_gradient(lighten(@color_contrast2, 10%), @color_contrast2); }
+	}
+}
+p.info, li.info {
+	border-color:@border_main;
+}
+.woocommerce_error {
+	color: @color_contrast;
+	border-color: @border_main;
+	background-color: @bg_dark;
+	border: 1px solid @bg_dark;
+}
+p.demo_store {
+	background: @bg_light;
+	border-bottom: 2px solid @border_main;
+}
+ul.products {
+	li.product {
+		img {
+			border: 1px solid @border_main;
+		}
+		h3 {
+			a  { color: darken(@color_body, 20%); }
+		}
+		.price { color: lighten(@color_body, 40%); }
+	}
+}
+.single-product {
+	.images {
+		.thumbnails {
+			img  {
+				border: 1px solid lighten(@border_main, 10%);
+				&:hover  {
+					border: 1px solid @border_main;
+				}
+			}
+		}
+	}
+	.summary {
+		.price {
+			color: @color_contrast;
+		}
+		.single_variation_wrap {
+			.single_variation {
+				background: @bg_light;
+			}
+		}
+	}
+	.woocommerce_tabs {
+		ul.tabs {
+			.vertical_gradient(@bg_light,darken(@bg_light, 10%));
+			border:1px solid @border_main;
+			li {
+				a {
+					color: lighten(@color_body, 5%);
+					border:1px solid lighten(@border_main, 5%);
+					.vertical_gradient(@bg_light, darken(@bg_light, 5%));
+					&:hover { border-color: @border_main; }
+				}
+				&.active {
+					a {
+						background: darken(@bg_light, 20%); color: darken(@bg_dark, 40%);
+						&:hover  { border-color: #fff; }
+					}
+				}
+			}
+		}
+		.panel {
+			background: @bg_light;
+			border: 1px solid @border_main;
+			border-top: none;
+		}
+	}
+	#reviews #comments  {
+		.commentlist  {
+			li  {
+				background: lighten(@bg_light, 2%); border: 1px solid lighten(@border_main, 10%);
+			}
+		}
+	}
+}
+table.cart {
+	td.product-name  {
+		a  { color: @color_body; }
+	}
+	dl.variation {
+		color: lighten(@color_body, 15%);
+	}
+	.product-quantity {
+		.input-text { border:1px solid @border_main; }
+	}
+}
+.checkout {
+	ul.payment_methods {
+		.payment_box {
+			background: @bg_light;
+			border: 1px solid @border_main;
+		}
+	}
+}
+a.button, 
+a.comment-reply-link, 
+#commentform #submit,
+.submit,
+input[type=submit],
+input.button,
+button.button {
+	border: 1px solid @bg_dark - #333;
+	border-bottom-color: @bg_dark - #444;
+	font-family: @sans_google;
+	.vertical_gradient(@bg_dark, @bg_dark - #222);
+	&:hover { text-decoration: none; .vertical_gradient(@bg_dark + #111,@bg_dark - #111); }
+	&:active {
+		border-color: @bg_dark - #555;
+	}
+}
+.ie6 {
+	.button, .button:visited { color: @color_body !important; }
+	.reply a { color: @color_body!important; }
+}
+@media only screen and (min-width: 1024px) {
+	#connect { 
+		.related-posts {
+			border-left: 1px solid lighten(@border_main, 5%);
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	#top {
+		background: darken(@bg_dark, 20%);
+		.nav {
+			font-family: @sans;
+			a {
+				color: lighten(@bg_dark, 70%);
+			}
+			li {
+				ul {
+					background: @bg_dark; 
+					li {
+						a:link, a:visited {
+							color: lighten(@bg_dark, 50%);
+						}
+					}
+				}
+			}
+		}
+	}
+	#navigation  {	
+		.nav li {
+			a { border-right:1px solid lighten(@bg_dark, 5%); border-left:1px solid darken(@bg_dark, 15%); }
+	   		ul {
+	   			background: @bg_dark;
+	   			border:1px solid darken(@bg_dark, 10%);
+	   		 	li {
+	   		 		a { border-top: 1px solid lighten(@bg_dark, 5%); border-bottom: 1px solid darken(@bg_dark, 15%); }
+	   		 	}
+	   		 }
+		}	
+		ul.mini-cart {
+		    li {
+		    	ul.cart_list {
+		    		background: lighten(@bg_dark, 2%);
+		    		border: 1px solid @bg_dark;
+		    		li {
+		    			border-top: 1px solid darken(@bg_dark, 10%);
+		    		}
+		    		li.cart-title {
+		    			h3 { text-shadow: 1px 1px 0 darken(@bg_dark, 10%); }
+		    		}
+		    		li.cart_list_product {
+		    			a { text-shadow: 1px 1px 0 darken(@bg_dark, 10%); }
+		    		}
+		    		li.total { background: darken(@bg_dark, 5%); border: 1px solid darken(@bg_dark, 10%); }
+		    		li.buttons {
+		    			.button {
+		    				border: 1px solid darken(@color_contrast2, 20%);
+		    				.vertical_gradient(@color_contrast2, darken(@color_contrast2, 10%));
+		    				&:hover  { .vertical_gradient(lighten(@color_contrast2, 10%), @color_contrast2); }
+		    			}
+		    		}
+		    	}
+		    }
+		}
+	}
+	#wrapper #searchbar  {
+		ul  {
+			li  {
+				border-right: 1px solid @border_main;
+				a  { color: @color_body; }
+			}
+		}
+	}
+	#customer_details {
+		.col-1 { padding-right:4%; border-right:1px solid @border_main; }
+	}
+}

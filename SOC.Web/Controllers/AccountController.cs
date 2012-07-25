@@ -2,7 +2,9 @@
 using System.Web.Mvc;
 using System.Web.Routing;
 using DotNetOpenAuth.OpenId.RelyingParty;
-using SOC.Web.Models;
+using PerceptiveMCAPI;
+using PerceptiveMCAPI.Methods;
+using PerceptiveMCAPI.Types;
 using SOC.Web.Models.ViewModels;
 
 namespace SOC.Web.Controllers
@@ -49,6 +51,29 @@ namespace SOC.Web.Controllers
             return View(string.Empty);
         }
 
+        public ActionResult Subscribe(string email)
+        {
+            var cmd = new listSubscribe();
+            var newlistSubscribeParms = new listSubscribeParms
+            {
+                apikey = "5e61834e9ebfdefb991a32f48264f354-us5",
+                id = "dae87a1909",
+                email_address = email,
+                double_optin = false,
+                email_type = EnumValues.emailType.html,
+                replace_interests = true,
+                send_welcome = false,
+                update_existing = true
+            };
+            var newlistSubscribeInput = new listSubscribeInput(newlistSubscribeParms);
+            var subscribeSuccess = cmd.Execute(newlistSubscribeInput);
+            return Json("successful");
+        }
+
+        public ActionResult Contact(string email, string text)
+        {
+            return Json("successful");
+        }
     }
 
 }
