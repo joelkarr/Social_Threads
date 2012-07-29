@@ -5,8 +5,6 @@ namespace SOC.Web.Controllers
 {
     public class CartController : Controller
     {
-        //
-        // GET: /Checkout/
 
         public ActionResult Current()
         {
@@ -14,6 +12,11 @@ namespace SOC.Web.Controllers
             return View("Current", new BaseViewModel());
         }
 
+        public ActionResult Checkout()
+        {
+
+            return View("Checkout", new BaseViewModel());
+        }
 
     }
 }

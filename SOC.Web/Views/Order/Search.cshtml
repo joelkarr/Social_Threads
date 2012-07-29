@@ -1,0 +1,25 @@
+﻿
+@{
+
+}
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Group</th>
+            <th>Deadline</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var order in Model.Orders)
+        {
+            <tr>
+                <td><a href="/Order/Form/@(order.Id)">@order.Title</a></td>
+                <td>@order.Group</td>
+                <td>@String.Format("{0:dddd, MMMM d, yyyy}", order.Deadline)</td>
+            </tr>
+        }
+    </tbody>
+</table>

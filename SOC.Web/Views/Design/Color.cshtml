@@ -1,0 +1,310 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style type="text/css">
+
+/* Palette color codes */
+/* Feel free to copy&paste color codes to your application */
+
+.primary-1 { background-color: #0D56A6 }
+.primary-2 { background-color: #274F7D }
+.primary-3 { background-color: #04356C }
+.primary-4 { background-color: #4186D3 }
+.primary-5 { background-color: #689AD3 }
+
+.secondary-a-1 { background-color: #1B1BB3 }
+.secondary-a-2 { background-color: #313186 }
+.secondary-a-3 { background-color: #090974 }
+.secondary-a-4 { background-color: #4F4FD9 }
+.secondary-a-5 { background-color: #7373D9 }
+
+.secondary-b-1 { background-color: #00A287 }
+.secondary-b-2 { background-color: #1E796A }
+.secondary-b-3 { background-color: #006957 }
+.secondary-b-4 { background-color: #34D0B6 }
+.secondary-b-5 { background-color: #5ED0BD }
+
+.complement-1 { background-color: #FF9A00 }
+.complement-2 { background-color: #BF8730 }
+.complement-3 { background-color: #A66400 }
+.complement-4 { background-color: #FFB440 }
+.complement-5 { background-color: #FFC873 }
+
+/* end */
+
+
+body {
+	margin:0; padding: 2em;
+	background:white;
+	color: #666;
+	font: 75%/1.33 Verdana, sans-serif;
+	text-align:left;
+	}
+h1 {
+	margin: 0.5em 0;
+	font-size: 200%;
+	}
+p {
+	margin: 0.5em 0;
+	}
+
+.color-table {
+	margin: 2em 2em 5em;
+	border-collapse:collapse;
+	border:none;
+	border-spacing:0;
+	font-size:100%;
+	}
+.color-table th {
+	padding: 0 1em 0 0;
+	text-align:right;
+	vertical-align: middle;
+	font-size:110%;
+	border: none;
+	}
+.color-table td.sample {
+	width:10em; height:8em;
+	padding: 10px;
+	text-align:center;
+	vertical-align:middle;
+	font-size:90%;
+	border: 1px solid white;
+	white-space:nowrap;
+	}
+.color-table.small td.sample {
+	width:4em; height:4em;
+	padding:0;
+	border:none;
+	}
+.color-table .white { margin-bottom:0.2em; color:white }
+.color-table .black { margin-top:0.2em; color:black }
+
+hr {
+	border:none;
+	border-bottom:1px solid silver;
+	}
+#footer {
+	padding:1em;
+	text-align:center;
+	font-size:80%;
+	}
+
+</style>
+        <title>Color</title>
+    </head>
+<body>
+    <table class="color-table">
+        <tbody><tr>
+                   <th>Primary Color:</th>
+                   <td class="sample primary-1">
+                       <div class="white">
+                           <strong>0D56A6</strong>
+                       </div>
+                       <div class="black">
+                           <strong>0D56A6</strong>
+                       </div>
+                   </td>
+                   <td class="sample primary-2">
+                       <div class="white">
+                           <strong>274F7D</strong>
+                       </div>
+                       <div class="black">
+                           <strong>274F7D</strong>
+                       </div>
+                   </td>
+                   <td class="sample primary-3">
+                       <div class="white">
+                           <strong>04356C</strong>
+                       </div>
+                       <div class="black">
+                           <strong>04356C</strong>
+                       </div>
+                   </td>
+                   <td class="sample primary-4">
+                       <div class="white">
+                           <strong>4186D3</strong>
+                       </div>
+                       <div class="black">
+                           <strong>4186D3</strong>
+                       </div>
+                   </td>
+                   <td class="sample primary-5">
+                       <div class="white">
+                           <strong>689AD3</strong>
+                       </div>
+                       <div class="black">
+                           <strong>689AD3</strong>
+                       </div>
+                   </td>
+               </tr>
+            <tr>
+                <th>Secondary Color A:</th>
+                <td class="sample secondary-a-1">
+                    <div class="white">
+                        <strong>1B1BB3</strong>
+                    </div>
+                    <div class="black">
+                        <strong>1B1BB3</strong>
+                    </div>
+                </td>
+                <td class="sample secondary-a-2">
+                    <div class="white">
+                        <strong>313186</strong>
+                    </div>
+                    <div class="black">
+                        <strong>313186</strong>
+                    </div>
+                </td>
+                <td class="sample secondary-a-3">
+                    <div class="white">
+                        <strong>090974</strong>
+                    </div>
+                    <div class="black">
+                        <strong>090974</strong>
+                    </div>
+                </td>
+                <td class="sample secondary-a-4">
+                    <div class="white">
+                        <strong>4F4FD9</strong>
+                    </div>
+                    <div class="black">
+                        <strong>4F4FD9</strong>
+                    </div>
+                </td>
+                <td class="sample secondary-a-5">
+                    <div class="white">
+                        <strong>7373D9</strong>
+                    </div>
+                    <div class="black">
+                        <strong>7373D9</strong>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Secondary Color B:</th>
+                <td class="sample secondary-b-1">
+                    <div class="white">
+                        <strong>00A287</strong>
+                    </div>
+                    <div class="black">
+                        <strong>00A287</strong>
+                    </div>
+                </td>
+                <td class="sample secondary-b-2">
+                    <div class="white">
+                        <strong>1E796A</strong>
+                    </div>
+                    <div class="black">
+                        <strong>1E796A</strong>
+                    </div>
+                </td>
+                <td class="sample secondary-b-3">
+                    <div class="white">
+                        <strong>006957</strong>
+                    </div>
+                    <div class="black">
+                        <strong>006957</strong>
+                    </div>
+                </td>
+                <td class="sample secondary-b-4">
+                    <div class="white">
+                        <strong>34D0B6</strong>
+                    </div>
+                    <div class="black">
+                        <strong>34D0B6</strong>
+                    </div>
+                </td>
+                <td class="sample secondary-b-5">
+                    <div class="white">
+                        <strong>5ED0BD</strong>
+                    </div>
+                    <div class="black">
+                        <strong>5ED0BD</strong>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>Complementary Color:</th>
+                <td class="sample complement-1">
+                    <div class="white">
+                        <strong>FF9A00</strong>
+                    </div>
+                    <div class="black">
+                        <strong>FF9A00</strong>
+                    </div>
+                </td>
+                <td class="sample complement-2">
+                    <div class="white">
+                        <strong>BF8730</strong>
+                    </div>
+                    <div class="black">
+                        <strong>BF8730</strong>
+                    </div>
+                </td>
+                <td class="sample complement-3">
+                    <div class="white">
+                        <strong>A66400</strong>
+                    </div>
+                    <div class="black">
+                        <strong>A66400</strong>
+                    </div>
+                </td>
+                <td class="sample complement-4">
+                    <div class="white">
+                        <strong>FFB440</strong>
+                    </div>
+                    <div class="black">
+                        <strong>FFB440</strong>
+                    </div>
+                </td>
+                <td class="sample complement-5">
+                    <div class="white">
+                        <strong>FFC873</strong>
+                    </div>
+                    <div class="black">
+                        <strong>FFC873</strong>
+                    </div>
+                </td>
+            </tr>
+        </tbody></table>
+        <table class="color-table small">
+	<tbody><tr>
+		<th>Primary Color:</th>
+		<td class="sample primary-1"></td>
+		<td class="sample primary-2"></td>
+		<td class="sample primary-3"></td>
+		<td class="sample primary-4"></td>
+		<td class="sample primary-5"></td>
+	</tr>
+	<tr>
+		<th>Secondary Color A:</th>
+		<td class="sample secondary-a-1"></td>
+		<td class="sample secondary-a-2"></td>
+		<td class="sample secondary-a-3"></td>
+		<td class="sample secondary-a-4"></td>
+		<td class="sample secondary-a-5"></td>
+	</tr>
+	<tr>
+		<th>Secondary Color B:</th>
+		<td class="sample secondary-b-1"></td>
+		<td class="sample secondary-b-2"></td>
+		<td class="sample secondary-b-3"></td>
+		<td class="sample secondary-b-4"></td>
+		<td class="sample secondary-b-5"></td>
+	</tr>
+	<tr>
+		<th>Complementary Color:</th>
+		<td class="sample complement-1"></td>
+		<td class="sample complement-2"></td>
+		<td class="sample complement-3"></td>
+		<td class="sample complement-4"></td>
+		<td class="sample complement-5"></td>
+	</tr>
+</tbody></table>
+</body>
+</html>

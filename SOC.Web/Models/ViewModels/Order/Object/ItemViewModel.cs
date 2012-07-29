@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SOC.Web.Models.ViewModels.Order
+namespace SOC.Web.Models.ViewModels.Order.Object
 {
     public class ItemViewModel
     {

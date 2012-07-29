@@ -169,6 +169,8 @@
     <Content Include="App_Themes\Default\Images\icon_tick.png" />
     <Content Include="App_Themes\Default\Images\logo.png" />
     <Content Include="App_Themes\Default\Images\sprite.png" />
+    <Content Include="App_Themes\Default\Scripts\cart.js" />
+    <Content Include="App_Themes\Default\Scripts\combobox.js" />
     <Content Include="App_Themes\Default\Styles\blue.css" />
     <Content Include="App_Themes\Default\Styles\blue_light.css" />
     <Content Include="App_Themes\Default\Styles\custom.css" />
@@ -273,6 +275,7 @@
     <Content Include="Base\Styles\jquery.ui.tabs.css" />
     <Content Include="Base\Styles\jquery.ui.theme.css" />
     <Content Include="Base\Styles\Studio\studio.css" />
+    <Content Include="Orders\100\officialShirt.PNG" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

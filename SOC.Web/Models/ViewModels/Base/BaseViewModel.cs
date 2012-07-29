@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Configuration;
+using SOC.Web.Models.ViewModels.Base.Partial;
 
 namespace SOC.Web.Models.ViewModels.Base
 {
@@ -12,12 +13,15 @@ namespace SOC.Web.Models.ViewModels.Base
         #endregion
 
         public string PageTitle { get; set; }
+        public List<BreadCrumbViewModel> BreadCrumbs { get; set; }
+        public string CurrentCrumb { get; set; }
         public URLCollection URLs { get; set; }
         public Theme Theme { get; set; }
         public BaseViewModel()
         {
             URLs = new URLCollection();
             CartItems= new List<Item>();
+            BreadCrumbs = new List<BreadCrumbViewModel>();
             Theme = new Theme {Name = "Default", BaseURL = "localhost", TagLine = "Online Order Forms"};
         }
     }
@@ -49,6 +53,11 @@ namespace SOC.Web.Models.ViewModels.Base
         public string CDNThemes
         {
             get { return ConfigurationManager.AppSettings["CDNThemePath"]; }
+        }
+
+        public string CDNOrders
+        {
+            get { return ConfigurationManager.AppSettings["CDNOrderPath"]; }
         }
 
     }

@@ -60,13 +60,12 @@
     <div id="wrapper">
 	    <nav id="navigation" class="col-full" role="navigation">
             <ul id="main-nav" class="nav fl sf-js-enabled">
-                <li id="menu-item-1690" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1690">
-                    <a href="/order/form">Order Form</a>
+                <li id="menu-item-1671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1671"><a href="/Account" class="sf-with-ul">Account</a>
                 </li>
-                <li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1681"><a href="/Account/Info" class="sf-with-ul">My Account<span class="sf-sub-indicator"> »</span></a>
+                <li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1681"><a href="/Order/Form" class="sf-with-ul">Order<span class="sf-sub-indicator"> »</span></a>
                     <ul class="sub-menu" style="display: none; visibility: hidden; ">
-                        <li id="menu-item-1682" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1682"><a href="/Account/Edit">Edit Profile</a></li>
-                        <li id="menu-item-1683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1683"><a href="/Account/History">View Order History</a></li>
+                        <li id="menu-item-1682" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1682"><a href="/Order/Search">Find Order Form</a></li>
+                        <li id="menu-item-1683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1683"><a href="/Order/History">View Order History</a></li>
                     </ul>
                 </li>
                 <li id="menu-item-1686" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1686"><a href="/Cart/Current" class="sf-with-ul">Cart<span class="sf-sub-indicator"> »</span></a>
@@ -110,6 +109,31 @@
 
         </nav><!-- /#navigation -->
         <div id="content" class="col-full">
+            @if(Model.BreadCrumbs.Count > 0)
+            {
+                <div class="breadcrumb breadcrumbs woo-breadcrumbs">
+                    <div class="breadcrumb-trail">
+                        <span class="trail-before">
+                            <span class="breadcrumb-title">You are here:</span>
+                        </span> 
+                        <a href="/Order/Search" title="Home" rel="home" class="trail-begin">Home</a> 
+                        @{ var lastCrumb = Model.BreadCrumbs.LastOrDefault().Display; }
+                        @foreach (var crumb in Model.BreadCrumbs)
+                        {
+                            <span class="sep">&gt;</span>
+                            if (crumb.Display != lastCrumb)
+                            {
+                                <a href="@crumb.Url" title="@crumb.Title">@crumb.Display</a>
+                            }
+                            else
+                            {
+                                <span class="trail-end">@crumb.Display</span>
+                            }
+                        }
+                    
+                    </div>
+                </div>
+            }
             <div id="main" class="col-left">
                 @RenderBody()
             </div>
@@ -134,12 +158,13 @@
     <!-- Javascript at the bottom for fast page loading -->
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>!window.jQuery && document.write(unescape('%3Cscript src="@Url.Content("~/js/libs/jquery-1.5.1.min.js")"%3E%3C/script%3E'))</script>
-
+@*    <script src=" //ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>*@
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/general.js"></script>
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/respond.IE.js"></script>
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/third-party.js"></script>
+    <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/cart.js"></script>
     <!-- end concatenated and minified scripts-->
 
     @RenderSection( "ScriptSection", false)

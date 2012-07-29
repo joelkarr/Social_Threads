@@ -1,6 +1,10 @@
-﻿@model SOC.Web.Models.ViewModels.Base.BaseViewModel
+﻿@model SOC.Web.Models.ViewModels.Order.FormViewModel
 @{
     ViewBag.Title = "Form";
 }
 
-@Html.Partial("_Product");
+
+@foreach (var product in Model.Order.Products)
+{
+    @Html.Partial("Partial/Product", product);
+}

@@ -438,8 +438,8 @@ body,
     max-width: 940px;
   }
   #main {
-   /* width: 63.83%;
-     600 / 940 = 0.6383 */
+   width: 100%;
+    
   }
   .layout-full .entry img {
     max-width: 100%;
