@@ -1,1 +1,22 @@
+.form_title {
+  background: #E3EDEF;
+  text-shadow: 0 1px 0 #ffffff;
+    margin-bottom: 10px;
+}
+
+.form_title .title
+{
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Bitter", sans-serif;
+}
+.form_title .subtitle 
+{
+  text-align: center;
+  color: #4d4d4d;
+  font-style: italic;
+}
+
 

@@ -6,14 +6,15 @@ using SOC.Web.Models.ViewModels.Order;
 using SOC.Web.Models.ViewModels.Order.Object;
 using SOC.Web.Models.ViewModels.Shared;
 
+
 namespace SOC.Web.Controllers
 {
-    public class OrderController : BaseController
+    public partial class OrderController : BaseController
     {
         //
         // GET: /Order/
 
-        public ActionResult Form(string id)
+        public virtual ActionResult Form(string id)
         {
             var model = new FormViewModel();
             
@@ -41,10 +42,11 @@ namespace SOC.Web.Controllers
             var crumb2 = new BreadCrumbViewModel { Display = model.Order.Title, Title = model.Order.Title, Url = "/Order/Form/" + model.Order.Id };
             model.BreadCrumbs.Add(crumb);
             model.BreadCrumbs.Add(crumb2);
-            return View("Form", model);
+
+           return View("Form", model);
         }
 
-        public ActionResult Search()
+        public virtual ActionResult Search()
         {
             var model = new SearchViewModel();
             var order = new OrderViewModel

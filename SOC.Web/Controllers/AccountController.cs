@@ -9,7 +9,7 @@ using SOC.Web.Models.ViewModels;
 
 namespace SOC.Web.Controllers
 {
-    public class AccountController : Controller
+    public partial class AccountController : Controller
     {
 
         public IFormsAuthenticationService FormsService { get; set; }
@@ -23,7 +23,7 @@ namespace SOC.Web.Controllers
             base.Initialize(requestContext);
         }
 
-        public ActionResult LogOn(string returnUrl)
+        public virtual ActionResult LogOn(string returnUrl)
         {
             if (!string.IsNullOrEmpty(returnUrl))
                 Response.Cookies.Add(new HttpCookie("returnUrl", returnUrl));
@@ -38,7 +38,7 @@ namespace SOC.Web.Controllers
         // URL: /Account/LogOff
         // **************************************
 
-        public ActionResult LogOff()
+        public virtual ActionResult LogOff()
         {
             FormsService.SignOut();
 
@@ -46,12 +46,12 @@ namespace SOC.Web.Controllers
         }
 
         [Authorize]
-        public ActionResult MyAccount()
+        public virtual ActionResult MyAccount()
         {
             return View(string.Empty);
         }
 
-        public ActionResult Subscribe(string email)
+        public virtual ActionResult Subscribe(string email)
         {
             var cmd = new listSubscribe();
             var newlistSubscribeParms = new listSubscribeParms
@@ -70,7 +70,7 @@ namespace SOC.Web.Controllers
             return Json("successful");
         }
 
-        public ActionResult Contact(string email, string text)
+        public virtual ActionResult Contact(string email, string text)
         {
             return Json("successful");
         }

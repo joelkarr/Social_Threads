@@ -62,7 +62,7 @@
             <ul id="main-nav" class="nav fl sf-js-enabled">
                 <li id="menu-item-1671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1671"><a href="/Account" class="sf-with-ul">Account</a>
                 </li>
-                <li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1681"><a href="/Order/Form" class="sf-with-ul">Order<span class="sf-sub-indicator"> »</span></a>
+                <li id="menu-item-1681" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1681"><a href="/Order/Search" class="sf-with-ul">Order<span class="sf-sub-indicator"> »</span></a>
                     <ul class="sub-menu" style="display: none; visibility: hidden; ">
                         <li id="menu-item-1682" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1682"><a href="/Order/Search">Find Order Form</a></li>
                         <li id="menu-item-1683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1683"><a href="/Order/History">View Order History</a></li>
@@ -77,36 +77,7 @@
             </ul>
 
         
-            <ul class="mini-cart nav">
-		        <li>
-                    <a href="/cart/view" title="View Sho" class="cart-parent">
-		    		    <span> 
-                            <mark>@(Model.CartItemCount) items</mark>
-                            <span class="amount">$@(Model.CartTotal)</span>
-		    		    </span>
-		    	    </a>
-                    <ul class="cart_list" style="visibility: hidden; display: none; ">
-                        <li class="cart-title"><h3>Your Cart Contents</h3></li>
-                        @if (Model.CartItemCount == 0)
-                        {
-                            <li class="empty">No products in the cart.</li>
-                        }
-                        else
-                        {
-                            foreach(var item in Model.CartItems)
-                            {
-                                <li class="cart_list_product">
-                                    <a href="/Item/@item.Id">
-                                        <img width="400" height="400" src="@item.ThumbnailPath" class="attachment-shop_thumbnail wp-post-image" alt="@item.Name" title="@item.Name">@item.Name
-                                    </a>
-                                    <span class="quantity">@(item.Quantity) × <span class="amount">$@(item.Price)</span></span>
-                                </li>
-                            }
-                        }
-                    </ul>
-		        </li>
-	  	    </ul>
-
+         @Html.Partial(MVC.Shared.Views.Partial.QuickCart, Model.Cart)
         </nav><!-- /#navigation -->
         <div id="content" class="col-full">
             @if(Model.BreadCrumbs.Count > 0)

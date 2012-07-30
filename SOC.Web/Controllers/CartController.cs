@@ -1,22 +1,30 @@
 ﻿using System.Web.Mvc;
 using SOC.Web.Models.ViewModels.Base;
+using SOC.Web.Models.ViewModels.Base.Partial;
 
 namespace SOC.Web.Controllers
 {
-    public class CartController : Controller
+    public partial class CartController : Controller
     {
 
-        public ActionResult Current()
+        public virtual ActionResult Current()
         {
 
             return View("Current", new BaseViewModel());
         }
 
-        public ActionResult Checkout()
+        public virtual ActionResult Checkout()
         {
+
 
             return View("Checkout", new BaseViewModel());
         }
 
+        public virtual ActionResult AddItem(int Id)
+        {
+            var model = Session["cart"] as CartViewModel ?? new CartViewModel();
+            return View(MVC.Shared.Views.Partial.QuickCart, model);
+
+        }
     }
 }

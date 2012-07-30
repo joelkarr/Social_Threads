@@ -1,0 +1,33 @@
+﻿@model SOC.Web.Models.ViewModels.Base.Partial.CartViewModel
+@{
+    Layout = null;
+}
+
+   <ul class="mini-cart nav">
+		        <li>
+                    <a href="/cart/view" title="View Sho" class="cart-parent">
+		    		    <span> 
+                            <mark>@(Model.Items.Count) items</mark>
+                            <span class="amount">$@(Model.TotalPrice)</span>
+		    		    </span>
+		    	    </a>
+                    <ul class="cart_list" style="visibility: hidden; display: none; ">
+                        <li class="cart-title"><h3>Your Cart Contents</h3></li>
+                        @if (Model.Items.Count == 0)
+                        {
+                            <li class="empty">No products in the cart.</li>
+                        }
+                        else
+                        {
+                            foreach(var item in Model.Items)
+                            {
+                                <li class="cart_list_product">
+                                    <img width="400" height="400" src="@item.ThumbnailPath" class="attachment-shop_thumbnail wp-post-image" alt="@item.Name" title="@item.Name">@item.Name
+                                    <span class="quantity">@(item.Quantity) × <span class="amount">$@(item.Price)</span></span>
+                                </li>
+                            }
+                        }
+                    </ul>
+		        </li>
+	  	    </ul>
+

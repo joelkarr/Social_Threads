@@ -2,12 +2,12 @@
 
 namespace SOC.Web.Controllers
 {
-    public class DesignController : Controller
+    public partial class DesignController : Controller
     {
         //
         // GET: /Design/
 
-        public ActionResult Color()
+        public virtual ActionResult Color()
         {
             return View();
         }

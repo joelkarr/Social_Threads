@@ -1,10 +1,11 @@
 ﻿using System.Web.Mvc;
 using SOC.Web.Helpers;
 using SOC.Web.Models.ViewModels.Base;
+using SOC.Web.Models.ViewModels.Base.Partial;
 
 namespace SOC.Web.Controllers
 {
-    public class BaseController : Controller
+    public partial class BaseController : Controller
     {
         #region Ovverrides
         protected ViewResult BaseView(IView view, object model = null)
@@ -54,9 +55,20 @@ namespace SOC.Web.Controllers
         #region Events
         protected override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-           
+            var model = filterContext.Controller.ViewData.Model as BaseViewModel ?? new BaseViewModel();
+
+            model.Cart = GetCartFromSession();
+
+            filterContext.Controller.ViewData.Model = model;
             base.OnActionExecuting(filterContext);
         }
+
+        private CartViewModel GetCartFromSession()
+        {
+            var cart = Session["cart"] as CartViewModel ?? new CartViewModel();
+            return cart;
+        }
+
         #endregion
     }
 }

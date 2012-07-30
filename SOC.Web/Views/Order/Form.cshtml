@@ -3,6 +3,11 @@
     ViewBag.Title = "Form";
 }
 
+<div class="form_title">
+    <h1 class="title">@Model.Order.Title.ToUpper()</h1>
+    <h3 class="subtitle">Due: @String.Format("{0:dddd, MMMM d, yyyy}", @Model.Order.Deadline)</h3>  
+</div>
+
 
 @foreach (var product in Model.Order.Products)
 {

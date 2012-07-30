@@ -6,12 +6,7 @@ namespace SOC.Web.Models.ViewModels.Base
 {
     public class BaseViewModel
     {
-        #region Cart
-        public int CartItemCount { get; set; }
-        public decimal CartTotal { get; set; }
-        public List<Item> CartItems { get; set; }
-        #endregion
-
+        public CartViewModel Cart { get; set; }
         public string PageTitle { get; set; }
         public List<BreadCrumbViewModel> BreadCrumbs { get; set; }
         public string CurrentCrumb { get; set; }
@@ -19,22 +14,14 @@ namespace SOC.Web.Models.ViewModels.Base
         public Theme Theme { get; set; }
         public BaseViewModel()
         {
+            Cart = new CartViewModel();
             URLs = new URLCollection();
-            CartItems= new List<Item>();
             BreadCrumbs = new List<BreadCrumbViewModel>();
             Theme = new Theme {Name = "Default", BaseURL = "localhost", TagLine = "Online Order Forms"};
         }
     }
 
-    public class Item
-    {
-        public int Id { get; set; }
-        public string Name { get; set; }
-        public int Quantity { get; set; }
-        public string Size { get; set; }
-        public decimal Price { get; set; }
-        public string ThumbnailPath { get; set; }
-    }
+
     public class Theme
     {
         public string Name { get; set; }

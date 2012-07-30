@@ -3548,7 +3548,9 @@ ul.products li.product:hover .button {
 .single-product .../images .thumbnails a.last {
   margin-right: 0;
 }
-.single-product .summary {
+.single-product .summary 
+{
+    margin-top: 4em;
   margin-bottom: 3em;
   /* Stock */
 

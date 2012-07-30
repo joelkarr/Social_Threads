@@ -2,12 +2,12 @@
 
 namespace SOC.Web.Controllers
 {
-    public class DesignerController : Controller
+    public partial class DesignerController : Controller
     {
         //
         // GET: /Designer/
 
-        public ActionResult Studio()
+        public virtual ActionResult Studio()
         {
             return View();
         }
@@ -15,46 +15,46 @@ namespace SOC.Web.Controllers
         #region Web API
 
         #region Graphics
-        public JsonResult GetGraphicsFromGroup(int groupId)
+        public virtual JsonResult GetGraphicsFromGroup(int groupId)
         {
             return new JsonResult();
         }
 
-        public JsonResult GetGraphcisFromKeyword(string keyword)
+        public virtual JsonResult GetGraphcisFromKeyword(string keyword)
         {
             return new JsonResult();
         }
         #endregion
 
-        public JsonResult GetAutoCompleteKeywords(string input)
+        public virtual JsonResult GetAutoCompleteKeywords(string input)
         {
             return new JsonResult();
         }
 
         #region Products
-        public JsonResult GetColorOptionsFromProductId(int productId)
+        public virtual JsonResult GetColorOptionsFromProductId(int productId)
         {
             return new JsonResult();
         }
 
-        public JsonResult GetAvailableSizesFromProductId(int productId)
+        public virtual JsonResult GetAvailableSizesFromProductId(int productId)
         {
             return new JsonResult();
         }
         #endregion
 
-        public JsonResult GetPrintersAvailableInkColors()
+        public virtual JsonResult GetPrintersAvailableInkColors()
         {
             //use baseModel Printer
             return new JsonResult();
         }
 
         #region Fonts
-        public JsonResult GetFontsFromGroup(int groupId)
+        public virtual JsonResult GetFontsFromGroup(int groupId)
         {
             return new JsonResult();
         }
-        public JsonResult GetFontsFromKeyword(string keyword)
+        public virtual JsonResult GetFontsFromKeyword(string keyword)
         {
             return new JsonResult();
         }

@@ -2,12 +2,12 @@
 
 namespace SOC.Web.Controllers
 {
-    public class PricingController : Controller
+    public partial class PricingController : Controller
     {
         //
         // GET: /Pricing/
 
-        public ActionResult Quote()
+        public virtual ActionResult Quote()
         {
             return View();
         }

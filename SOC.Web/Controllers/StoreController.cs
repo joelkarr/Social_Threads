@@ -2,12 +2,12 @@
 
 namespace SOC.Web.Controllers
 {
-    public class StoreController : Controller
+    public partial class StoreController : Controller
     {
         //
         // GET: /Store/
 
-        public ActionResult OrderForm()
+        public virtual ActionResult OrderForm()
         {
             return View();
         }

@@ -3,14 +3,14 @@ using SOC.Web.Models.ViewModels.Base;
 
 namespace SOC.Web.Controllers
 {
-    public class HomeController : BaseController
+    public partial class HomeController : BaseController
     {
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             return ComingSoon();
         }
 
-        public ActionResult ComingSoon()
+        public virtual ActionResult ComingSoon()
         {
             var model = new BaseViewModel();
             return View("ComingSoon", model);
