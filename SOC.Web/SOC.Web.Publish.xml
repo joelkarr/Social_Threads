@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <publishData>
   <publishProfile publishUrl="https://deploy.social-threads.com:8172/msdeploy.axd" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="Social Threads" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="True" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="True" profileName="Social Threads" publishMethod="MSDeploy" replaceMatchingFiles="False" userName="DeployManager" savePWD="True" userPWD="AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA/7Lwk0ZRM0OZJvFU1aCN0wAAAAACAAAAAAADZgAAwAAAABAAAAApJft+WeqH1TWRsf1BiiIFAAAAAASAAACgAAAAEAAAAIMVdqnYpAAGUbGG/zMH8pcYAAAALx+0OTMduHnpwVY+CHgwQYlOIArEnrwPFAAAANjOvriCGAFn+ZPtgaqEUTlabO48" SelectedForPublish="True">
-    <file relUrl="bin/SOC.Util.dll" publishTime="06/26/2012 16:38:43" />
     <file relUrl="Themes/Classic/Views/Shared/_AccountBar.cshtml" publishTime="06/26/2012 15:18:33" />
     <file relUrl="Themes/Classic/Views/Store/OrderForm.cshtml" publishTime="06/26/2012 15:18:34" />
     <file relUrl="Global.asax" publishTime="03/01/2012 20:43:53" />
@@ -15,6 +14,7 @@
     <file relUrl="Themes/Classic/Views/Shared/_Layout.cshtml" publishTime="06/26/2012 15:18:33" />
     <file relUrl="Themes/Classic/Views/Pricing/Quote.cshtml" publishTime="06/26/2012 15:18:33" />
     <file relUrl="humans.txt" publishTime="03/01/2012 20:43:53" />
+    <file relUrl="Web.config" publishTime="07/16/2012 18:04:54" />
     <file relUrl="bin/Elmah.dll" publishTime="03/01/2012 21:46:57" />
     <file relUrl="Themes/Classic/Views/Home/Index.cshtml" publishTime="06/26/2012 17:07:01" />
     <file relUrl="Themes/Classic/Views/Checkout/Result.cshtml" publishTime="06/26/2012 15:18:33" />
@@ -27,6 +27,7 @@
     <file relUrl="Themes/Classic/Views/Home/About.cshtml" publishTime="06/26/2012 15:18:33" />
     <file relUrl="bin/SOC.Web.dll" publishTime="07/16/2012 18:06:03" />
     <file relUrl="bin/SOC.Util.pdb" publishTime="06/26/2012 16:38:43" />
+    <file relUrl="Themes/Classic/Views/Shared/Error.cshtml" publishTime="06/26/2012 15:18:33" />
     <file relUrl="BaseViews/ComingSoon.cshtml" publishTime="07/16/2012 18:15:10" />
     <file relUrl="bin/Newtonsoft.Json.dll" publishTime="03/01/2012 21:43:00" />
     <file relUrl="bin/PerceptiveMCAPI.dll" publishTime="07/16/2012 15:59:05" />
@@ -43,10 +44,9 @@
     <file relUrl="robots.txt" publishTime="03/01/2012 20:43:53" />
     <file relUrl="bin/SOC.Web.pdb" publishTime="07/16/2012 18:06:03" />
     <file relUrl="Themes/Classic/Views/_ViewStart.cshtml" publishTime="06/26/2012 17:01:34" />
-    <file relUrl="Themes/Classic/Views/Shared/Error.cshtml" publishTime="06/26/2012 15:18:33" />
+    <file relUrl="bin/SOC.Util.dll" publishTime="06/26/2012 16:38:43" />
     <file relUrl="bin/Soc.Config.pdb" publishTime="07/16/2012 18:04:55" />
     <file relUrl="bin/sr/DotNetOpenAuth.resources.dll" publishTime="05/01/2011 19:29:10" />
     <file relUrl="bin/Soc.Config.dll" publishTime="07/16/2012 18:04:55" />
-    <file relUrl="Web.config" publishTime="07/16/2012 18:04:54" />
   </publishProfile>
 </publishData>

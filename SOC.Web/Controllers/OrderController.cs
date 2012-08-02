@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using SOC.Web.Models.ViewModels.Base;
 using SOC.Web.Models.ViewModels.Base.Partial;
 using SOC.Web.Models.ViewModels.Order;
 using SOC.Web.Models.ViewModels.Order.Object;
@@ -16,8 +17,7 @@ namespace SOC.Web.Controllers
 
         public virtual ActionResult Form(string id)
         {
-            var model = new FormViewModel();
-            
+            var model = new FormViewModel(ViewData.Model as BaseViewModel);
             var product1 = new ProductViewModel
                                {
                                    Title = "Karrbros Official Shirt",
@@ -46,9 +46,15 @@ namespace SOC.Web.Controllers
            return View("Form", model);
         }
 
+        public virtual  JsonResult GetDefault()
+        {
+            var model = new ItemViewModel {Sku = "test", Price = 10.00, Size = "Small", Quantity = 0};
+            return Json(model);
+        }
+
         public virtual ActionResult Search()
         {
-            var model = new SearchViewModel();
+            var model = new SearchViewModel(ViewData.Model as BaseViewModel);
             var order = new OrderViewModel
                             {Id = 100, Deadline = DateTime.Now, Title = "Karrbros Official", Group = "Best Group Evar"};
             var order2 = new OrderViewModel {Id = 101, Deadline = DateTime.Now.AddDays(15), Title = "Clinton Wrestling", Group = "Time To Get Live" };

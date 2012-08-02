@@ -42,8 +42,8 @@ namespace SOC.Web.Controllers {
 
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult AddItem() {
-            return new T4MVC_ActionResult(Area, Name, ActionNames.AddItem);
+        public System.Web.Mvc.ActionResult Add() {
+            return new T4MVC_ActionResult(Area, Name, ActionNames.Add);
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -62,23 +62,23 @@ namespace SOC.Web.Controllers {
         public class ActionNamesClass {
             public readonly string Current = "Current";
             public readonly string Checkout = "Checkout";
-            public readonly string AddItem = "AddItem";
+            public readonly string Add = "Add";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants {
             public const string Current = "Current";
             public const string Checkout = "Checkout";
-            public const string AddItem = "AddItem";
+            public const string Add = "Add";
         }
 
 
-        static readonly ActionParamsClass_AddItem s_params_AddItem = new ActionParamsClass_AddItem();
+        static readonly ActionParamsClass_Add s_params_Add = new ActionParamsClass_Add();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_AddItem AddItemParams { get { return s_params_AddItem; } }
+        public ActionParamsClass_Add AddParams { get { return s_params_Add; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_AddItem {
-            public readonly string Id = "Id";
+        public class ActionParamsClass_Add {
+            public readonly string item = "item";
         }
         static readonly ViewNames s_views = new ViewNames();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -104,9 +104,9 @@ namespace SOC.Web.Controllers {
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult AddItem(int Id) {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.AddItem);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "Id", Id);
+        public override System.Web.Mvc.ActionResult Add(SOC.Web.Models.ViewModels.Base.Partial.ItemViewModel item) {
+            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Add);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "item", item);
             return callInfo;
         }
 

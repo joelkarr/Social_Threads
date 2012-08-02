@@ -13,3 +13,53 @@
 {
     @Html.Partial("Partial/Product", product);
 }
+
+
+@section ScriptSection{
+    
+<script type="text/javascript">
+    // Initialized the namespace
+    var KnockoutOrderForm = {};
+
+    // View model declaration
+    KnockoutOrderForm.initViewModel = function (item) {
+        var itemViewModel = {
+            sku: ko.observable("testsku"),
+            name: ko.observable("test title"),
+            quantity: ko.observable(2),
+            availableSizes: ["Small", "Medium", "Large", "X-Large"],
+            size: ko.observable("Small"),
+            price: ko.observable("19.90")
+
+        };
+        return itemViewModel;
+    }
+
+    // Bind the item
+    KnockoutOrderForm.bindData = function (item) {
+        // Create the view model
+        var viewModel = KnockoutOrderForm.initViewModel(item);
+
+        ko.applyBindings(viewModel);
+    }
+
+    KnockoutOrderForm.additem = function () {
+        $.ajax({
+            url: "/Cart/Add/",
+            type: 'post',
+            data: ko.toJSON(this),
+            contentType: 'application/json',
+            success: function (result) {
+
+                $('#cart').html(result);
+            }
+        });
+    }
+
+
+    $(document).ready(function () {
+        KnockoutOrderForm.bindData();
+
+    });
+</script>
+}

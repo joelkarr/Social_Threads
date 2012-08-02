@@ -4,6 +4,7 @@ namespace SOC.Web.Models.ViewModels.Shared
 {
     public class ProductViewModel
     {
+        public string Sku { get; set; }
         public string Title { get; set; }
         public string DescriptionLine1 { get; set; }
         public string DescriptionLine2 { get; set; }

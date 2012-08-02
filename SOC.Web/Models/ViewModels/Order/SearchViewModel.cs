@@ -9,8 +9,9 @@ namespace SOC.Web.Models.ViewModels.Order
     {
         public List<OrderViewModel> Orders { get; set; }
 
-        public SearchViewModel()
+        public SearchViewModel(BaseViewModel model)
         {
+            Cart = model.Cart;
             Orders = new List<OrderViewModel>();
         }
     }

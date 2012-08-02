@@ -61,12 +61,14 @@ namespace SOC.Web.Controllers {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass {
             public readonly string Form = "Form";
+            public readonly string GetDefault = "GetDefault";
             public readonly string Search = "Search";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants {
             public const string Form = "Form";
+            public const string GetDefault = "GetDefault";
             public const string Search = "Search";
         }
 
@@ -100,6 +102,11 @@ namespace SOC.Web.Controllers {
         public override System.Web.Mvc.ActionResult Form(string id) {
             var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Form);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "id", id);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.JsonResult GetDefault() {
+            var callInfo = new T4MVC_JsonResult(Area, Name, ActionNames.GetDefault);
             return callInfo;
         }
 

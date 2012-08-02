@@ -6,8 +6,9 @@ namespace SOC.Web.Models.ViewModels.Order
     public class FormViewModel : BaseViewModel
     {
         public OrderViewModel Order { get; set; }
-        public FormViewModel()
+        public FormViewModel(BaseViewModel model)
         {
+            Cart = model.Cart;
             Order = new OrderViewModel();
         }
     }

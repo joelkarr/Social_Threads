@@ -14,10 +14,16 @@ namespace SOC.Web.Models.ViewModels.Base
         public Theme Theme { get; set; }
         public BaseViewModel()
         {
-            Cart = new CartViewModel();
             URLs = new URLCollection();
             BreadCrumbs = new List<BreadCrumbViewModel>();
             Theme = new Theme {Name = "Default", BaseURL = "localhost", TagLine = "Online Order Forms"};
+        }
+        public BaseViewModel(BaseViewModel model)
+        {
+            Cart = model.Cart ?? new CartViewModel();
+            URLs = new URLCollection();
+            BreadCrumbs = new List<BreadCrumbViewModel>();
+            Theme = new Theme { Name = "Default", BaseURL = "localhost", TagLine = "Online Order Forms" };
         }
     }
 

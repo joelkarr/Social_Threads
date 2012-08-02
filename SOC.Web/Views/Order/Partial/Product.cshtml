@@ -1,58 +1,52 @@
-﻿@model SOC.Web.Models.ViewModels.Shared.ProductViewModel
+﻿@using SOC.Web.Models.ViewModels.Base.Partial
+@model SOC.Web.Models.ViewModels.Shared.ProductViewModel
 @{
     Layout = null;
 }
 
 <div id="main" class="col-left single single-product">
-			<div itemscope="" itemtype="http://schema.org/Product" id="product-1090" class="post-1090 product type-product status-publish hentry">
-                <div class="images">
-                    @foreach (var image in Model.Images)
-                    {
-                        <a itemprop="image" href="@image.Path" class="zoom" rel="thumbnails" title="@image.Title"><img width="350" height="350" src="@image.Path" class="attachment-shop_single wp-post-image" alt="@image.AltText" title="@image.Title"></a>
-                        <div class="thumbnails"></div>
-                    }
+
+    @using (Html.BeginForm())
+    {
+        <div itemscope="" itemtype="http://schema.org/Product" id="product-1090" class="post-1090 product type-product status-publish hentry">
+            <div class="images">
+                @foreach (var image in Model.Images)
+                {
+                    <a itemprop="image" href="@image.Path" class="zoom" rel="thumbnails" title="@image.Title"><img width="350" height="350" src="@image.Path" class="attachment-shop_single wp-post-image" alt="@image.AltText" title="@image.Title"></a>
+                    <div class="thumbnails"></div>
+                }
+            </div>
+            <div class="summary" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+                <h1 itemprop="name" class="product_title entry-title">@Model.Title</h1>
+                <div itemprop="description">
+                    <p>@Model.DescriptionLine1</p>
+                    <p>@Model.DescriptionLine2</p>
                 </div>
-				<div class="summary" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
-                    <h1 itemprop="name" class="product_title entry-title">@Model.Title</h1>
-                    <div itemprop="description">
-                        <p>@Model.DescriptionLine1</p>
-                        <p>@Model.DescriptionLine2</p>
+                <table class="variations" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td><label for="pa_size">Size</label></td>
+                            <td><div class="selector3" id="uniform-pa_size"> 
+                                    <select id="pa_size" data-bind="options: availableSizes, value: size" name="attribute_pa_size" style="opacity: 0;">
+                                    </select>
+                                </div> </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+	
+                <div class="single_variation_wrap">
+                    <div class="single_variation"><span class="price"><ins><span class="amount" data-bind="text: price">$@Model.Price</span></ins></span></div>
+                    <div class="variations_button">
+                        <input type="hidden" name="variation_id" value="">
+                        <div class="quantity">
+                            <input name="quantity" data-bind="value: quantity" data-min="0" data-max="20" value="1" size="4" title="Qty" class="input-text qty text" maxlength="12">
+                        </div>			
+                        <input type="submit" data-bind="click: KnockoutOrderForm.additem" class="button alt" value="Add to cart"></input>
                     </div>
-            <form action="/Cart/AddItem" class="variations_form cart" method="post" enctype="multipart/form-data">
-	            <table class="variations" cellspacing="0">
-		            <tbody>
-						<tr>
-					        <td><label for="pa_size">Size</label></td>
-                            <td><div class="selector3" id="uniform-pa_size">
-                            <select id="pa_size" name="attribute_pa_size" style="opacity: 0; ">
-                                    <option value="">Choose an option…</option>
-                                    @foreach(var size in @Model.AvailableSizes)
-                                    {
-                                        <option value="@size">@size</option>
-                                    }
-                            </select></div> </td>
-				        </tr>
-	        		</tbody>
-	            </table>
-
-	
-	<div class="single_variation_wrap">
-        <div class="single_variation"><span class="price"><ins><span class="amount">$@Model.Price</span></ins></span></div>
-		<div class="variations_button">
-			<input type="hidden" name="variation_id" value="">
-            <div class="quantity">
-                <input name="quantity" data-min="0" data-max="20" value="1" size="4" title="Qty" class="input-text qty text" maxlength="12">
-            </div>			
-            <button type="submit" class="button alt">Add to cart</button>
-		</div>
-	</div>
-	<div><input type="hidden" name="product_id" value="1090"></div>
-
-	
-</form>
-
-				</div>
-			</div>
-
+                </div>
+            </div>
+        </div>
+    }
 		
-			</div>
+</div>

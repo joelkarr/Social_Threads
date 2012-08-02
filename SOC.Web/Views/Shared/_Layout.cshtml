@@ -76,8 +76,9 @@
                 </li>
             </ul>
 
-        
+            <div id="cart">
          @Html.Partial(MVC.Shared.Views.Partial.QuickCart, Model.Cart)
+         </div>
         </nav><!-- /#navigation -->
         <div id="content" class="col-full">
             @if(Model.BreadCrumbs.Count > 0)
@@ -135,6 +136,7 @@
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/general.js"></script>
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/respond.IE.js"></script>
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/third-party.js"></script>
+    <script src="@(Model.URLs.CDN)/Scripts/knockout-2.1.0.js"></script>
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/cart.js"></script>
     <!-- end concatenated and minified scripts-->
 

@@ -7,6 +7,7 @@ namespace SOC.Web.Controllers
 {
     public partial class BaseController : Controller
     {
+       
         #region Ovverrides
         protected ViewResult BaseView(IView view, object model = null)
         {

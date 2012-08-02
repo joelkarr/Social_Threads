@@ -7,30 +7,29 @@
 <section id="main" class="col-left">			                                              
     <article class="post-100 page type-page status-publish hentry">
         <section class="entry">
-            <p class="woocommerce_info">Already registered? <a href="#" class="showlogin">Click here to login</a></p>
-            <form method="post" class="login" style="display: none; ">
-	            <p>If you have shopped with us before, please enter your username and password in the boxes below. If you are a new customer please proceed to the Billing &amp; Shipping section.</p>
-	
+            <form method="post" class="login">
+	            <p class="form-row">
+                        Don't have an Account? <a class="lost_password" href="/account/signup">Sign Up Now</a>
+	            </p>
 	            <p class="form-row form-row-first">
 		            <label for="username">Username <span class="required">*</span></label>
 		            <input type="text" class="input-text" name="username" id="username">
 	            </p>
-	            <p class="form-row form-row-last">
-		            <label for="password">Password <span class="required">*</span></label>
+	            <p class="form-row">
+                    <label for="password">Password <span class="required">*</span></label>
 		            <input class="input-text" type="password" name="password" id="password">
 	            </p>
 	            <div class="clear"></div>
 
 	            <p class="form-row">
-		            <input type="hidden" id="_n" name="_n" value="02545b00b6"><input type="hidden" name="_wp_http_referer" value="/shelflife/checkout/">		<input type="submit" class="button" name="login" value="Login">
-		            <input type="hidden" name="redirect" value="http://demo2.woothemes.com/shelflife/checkout/">
-		            <a class="lost_password" href="http://demo2.woothemes.com/wp-login.php?action=lostpassword&amp;redirect_to=http://demo2.woothemes.com/shelflife">Lost Password?</a>
+		                <input type="submit" class="button" name="login" value="Login To Account"><br />
+                        <a class="lost_password" href="/account/accounthelp">Can't Access Account?</a>
 	            </p>
 	
 	            <div class="clear"></div>
             </form>
             <form name="checkout" method="post" class="checkout" action="http://demo2.woothemes.com/shelflife/checkout/">
-	<div class="col2-set" id="customer_details">
+	<div class="col2-set" id="customer_details" style="display:none">
 		<div class="col-1">
 	        <h3>Billing Address</h3>
             <p class="form-row form-row-first" id="billing_first_name_field">

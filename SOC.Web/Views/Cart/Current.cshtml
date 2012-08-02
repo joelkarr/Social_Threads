@@ -1,11 +1,8 @@
-﻿@{
-   
-}
-
+﻿@model SOC.Web.Models.ViewModels.Base.BaseViewModel
 <section id="main" class="col-left">			                            
     <article class="post-99 page type-page status-publish hentry">
         <section class="entry">
-            <form action="http://demo2.woothemes.com/shelflife/cart/" method="post">
+            <form action="/Cart/checkout" method="post">
                 <table class="shop_table cart" cellspacing="0">
 	                <thead>
 		                <tr>
@@ -18,32 +15,36 @@
 		                </tr>
 	                </thead>
 	                <tbody>
-				
-							<tr class="cart_table_item alt-table-row">
-						<!-- Remove from cart link -->
-						<td class="product-remove">
-							<a href="http://demo2.woothemes.com/shelflife/cart/?remove_item=8140292e68099e17337ee52e3c05ed9d&amp;_n=ea833a958a" class="remove" title="Remove this item">×</a>						</td>
+				    @foreach (var item in Model.Cart.Items)
+                    {
+                        <tr class="cart_table_item alt-table-row">
+                            <!-- Remove from cart link -->
+                            <td class="product-remove">
+                                <a href="cart/remove" class="remove" title="Remove this item">×</a>
+                            </td>
 						
-						<!-- The thumbnail -->
-						<td class="product-thumbnail">
-							<img width="350" height="350" src="http://demo2.woothemes.com/shelflife/files/2011/09/australia.jpg" class="attachment-shop_thumbnail wp-post-image" alt="australia" title="australia"><a href="http://demo2.woothemes.com/shelflife/shop/australia/"></a>						</td>
+                            <!-- The thumbnail -->
+                            <td class="product-thumbnail">
+                                <img width="350" height="350" src="@item.ThumbnailPath" class="attachment-shop_thumbnail wp-post-image" alt="australia" title="australia"><a href="http://demo2.woothemes.com/shelflife/shop/australia/"></a>						</td>
 						
-						<!-- Product Name -->
-						<td class="product-name">
-							<a href="http://demo2.woothemes.com/shelflife/shop/australia/">Australia</a><dl class="variation"><dt>Size:</dt><dd>Small</dd><dt>Colour:</dt><dd>Blue</dd></dl>						</td>
+                            <!-- Product Name -->
+                            <td class="product-name">
+                                <a href="">@item.Sku</a><dl class="variation"><dt>Size:</dt><dd>@item.Size</dd></dl>						</td>
 						
-						<!-- Product price -->
-						<td class="product-price">
-							<span class="amount">$10.99</span>						</td>
+                            <!-- Product price -->
+                            <td class="product-price">
+                                <span class="amount">$@item.Price</span>						
+                            </td>
 						
-						<!-- Quantity inputs -->
-						<td class="product-quantity">
-							<div class="quantity buttons_added"><input type="button" value="-" id="minus1" class="minus"><input name="cart[8140292e68099e17337ee52e3c05ed9d][qty]" data-min="" data-max="0" value="1" size="4" title="Qty" class="input-text qty text" maxlength="12"><input type="button" value="+" id="add1" class="plus"></div>						</td>
+                            <!-- Quantity inputs -->
+                            <td class="product-quantity">
+                                <div class="quantity buttons_added"><input type="button" value="-" id="minus1" class="minus"><input name="cart[8140292e68099e17337ee52e3c05ed9d][qty]" data-min="" data-max="0" value="@item.Quantity" size="4" title="Qty" class="input-text qty text" maxlength="12"><input type="button" value="+" id="add1" class="plus"></div>						</td>
 						
-						<!-- Product subtotal -->
-						<td class="product-subtotal">
-							<span class="amount">$10.99</span>						</td>
-					</tr>
+                            <!-- Product subtotal -->
+                            <td class="product-subtotal">
+                                <span class="amount">$@(item.Price * item.Quantity)</span>						</td>
+                        </tr>
+                    }
 							<tr>
 			<td colspan="6" class="actions">
 
@@ -54,9 +55,9 @@
 												
 					</div>*@
 				
-				<input type="submit" class="button" name="update_cart" value="Update Cart"> <a href="http://demo2.woothemes.com/shelflife/checkout/" class="checkout-button button alt">Proceed to Checkout →</a>
+				<input type="submit" class="button" name="update_cart" value="Update Cart"> <a href="/Cart/checkout" class="checkout-button button alt">Proceed to Checkout →</a>
 								
-				<input type="hidden" id="_n" name="_n" value="ea833a958a"><input type="hidden" name="_wp_http_referer" value="/shelflife/cart/">			</td>
+				</td>
 		</tr>
 		
 			</tbody>
@@ -69,7 +70,7 @@
 			<tbody>
 				<tr class="cart-subtotal alt-table-row">
 					<th><strong>Cart Subtotal</strong></th>
-					<td><strong><span class="amount">$10.99</span></strong></td>
+					<td><strong><span class="amount">$@Model.Cart.TotalPrice</span></strong></td>
 				</tr>			
 				<tr class="shipping">
 					<th>Shipping</th>
@@ -78,7 +79,7 @@
 				</tr>			
 				<tr class="total alt-table-row">
 					<th><strong>Order Total</strong></th>
-					<td><strong><span class="amount">$10.99</span></strong></td>
+					<td><strong><span class="amount">$@Model.Cart.TotalPrice</span></strong></td>
 				</tr>
 			</tbody>
 		</table>

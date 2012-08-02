@@ -215,6 +215,8 @@
     <Content Include="Base\Scripts\jquery-ui-1.8.17.min.js" />
     <Content Include="Base\Scripts\jquery.countdown.min.js" />
     <Content Include="Base\Scripts\jquery.tweet.js" />
+    <Content Include="Base\Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Base\Scripts\knockout-2.1.0.js" />
     <Content Include="Base\Scripts\knockout.debug.js" />
     <Content Include="Base\Scripts\knockout.js" />
     <Content Include="Base\Scripts\libs\dd_belatedpng.js" />
