@@ -1,0 +1,22 @@
+﻿@model SOC.Web.Models.ViewModels.Base.BaseViewModel
+<form method="post" class="login">
+	            <p class="form-row">
+                        Don't have an Account? <a class="lost_password" href="/account/signup">Sign Up Now</a>
+	            </p>
+	            <p class="form-row form-row-first">
+		            <label for="username">Username <span class="required">*</span></label>
+		            <input type="text" class="input-text" name="username" id="username">
+	            </p>
+	            <p class="form-row">
+                    <label for="password">Password <span class="required">*</span></label>
+		            <input class="input-text" type="password" name="password" id="password">
+	            </p>
+	            <div class="clear"></div>
+
+	            <p class="form-row">
+		                <input type="submit" class="button" name="login" value="Login To Account"><br />
+                        <a class="lost_password" href="/account/accounthelp">Can't Access Account?</a>
+	            </p>
+	
+	            <div class="clear"></div>
+            </form>

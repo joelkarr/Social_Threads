@@ -1,49 +1,70 @@
-﻿using System.Web;
-using System.Web.Mvc;
-using System.Web.Routing;
+﻿using System.Web.Mvc;
+using System.Web.Security;
+using DotNetOpenAuth.Messaging;
+using DotNetOpenAuth.OpenId;
+using DotNetOpenAuth.OpenId.Extensions.SimpleRegistration;
 using DotNetOpenAuth.OpenId.RelyingParty;
 using PerceptiveMCAPI;
 using PerceptiveMCAPI.Methods;
 using PerceptiveMCAPI.Types;
-using SOC.Web.Models.ViewModels;
 
 namespace SOC.Web.Controllers
 {
     public partial class AccountController : Controller
     {
 
-        public IFormsAuthenticationService FormsService { get; set; }
-        public OpenIdRelyingParty OpenId { get; set; }
-
-        protected override void Initialize(RequestContext requestContext)
+        public virtual ActionResult LogOn()
         {
-            if (FormsService == null) { FormsService = new FormsAuthenticationService(); }
-            if (OpenId == null) { OpenId = new OpenIdRelyingParty(); }
+            var openid = new OpenIdRelyingParty();
+            var response = openid.GetResponse();
 
-            base.Initialize(requestContext);
+            if (response != null)
+            {
+                switch (response.Status)
+                {
+                    case AuthenticationStatus.Authenticated:
+                        FormsAuthentication.RedirectFromLoginPage(
+                            response.ClaimedIdentifier, false);
+                        break;
+                    case AuthenticationStatus.Canceled:
+                        ModelState.AddModelError("loginIdentifier",
+                            "Login was cancelled at the provider");
+                        break;
+                    case AuthenticationStatus.Failed:
+                        ModelState.AddModelError("loginIdentifier",
+                            "Login failed using the provided OpenID identifier");
+                        break;
+                }
+            }
+
+            return View();
         }
 
-        public virtual ActionResult LogOn(string returnUrl)
+        [AcceptVerbs(HttpVerbs.Post)]
+        public virtual ActionResult LogOn(string loginIdentifier)
         {
-            if (!string.IsNullOrEmpty(returnUrl))
-                Response.Cookies.Add(new HttpCookie("returnUrl", returnUrl));
+            if (!Identifier.IsValid(loginIdentifier))
+            {
+                ModelState.AddModelError("loginIdentifier",
+                            "The specified login identifier is invalid");
+                return View();
+            }
 
-            if (TempData["auth_error"] != null)
-                ModelState.AddModelError("", TempData["auth_error"].ToString());
+            var openid = new OpenIdRelyingParty();
+            var request = openid.CreateRequest(
+                Identifier.Parse(loginIdentifier));
 
-            return View(string.Empty);
+            // Require some additional data
+            request.AddExtension(new ClaimsRequest
+                                     {
+                                         BirthDate = DemandLevel.NoRequest,
+                                         Email = DemandLevel.Require,
+                                         FullName = DemandLevel.Require
+                                     });
+
+            return request.RedirectingResponse.AsActionResult();
         }
 
-        // **************************************
-        // URL: /Account/LogOff
-        // **************************************
-
-        public virtual ActionResult LogOff()
-        {
-            FormsService.SignOut();
-
-            return RedirectToAction("Index", "Home");
-        }
 
         [Authorize]
         public virtual ActionResult MyAccount()

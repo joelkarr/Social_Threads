@@ -42,23 +42,28 @@
 </head>
 
 <body class="home blog chrome layout-left-content theme-shelflife">
-	<header id="header">
-		<div class="col-full">
+    <script type="text/javascript" src="//www.hellobar.com/hellobar.js"></script>
+<script type="text/javascript">
+    new HelloBar(51056, 71974);
+</script>
+
+    <header id="header">
+        <div class="col-full">
             <a id="logo" href="/" title="@Model.Theme.TagLine">
                 @*<img src="@(Model.URLs.CDNThemes)\@(Model.Theme.Name)\logo.png" alt="@Model.Theme.Name" />*@
                 <h1>Karrbros Custom Apparel</h1>
-			</a>    	
-	    	<hgroup>
+            </a>    	
+            <hgroup>
 	    	    
-				<h1 class="site-title"><a href="@Model.Theme.BaseURL">@Model.Theme.Name</a></h1>
-				<h2 class="site-description">@Model.Theme.TagLine</h2>
+                <h1 class="site-title"><a href="@Model.Theme.BaseURL">@Model.Theme.Name</a></h1>
+                <h2 class="site-description">@Model.Theme.TagLine</h2>
 			      	
-			</hgroup>
+            </hgroup>
         </div><!-- /.col-full -->
-	</header><!-- /#header -->
+    </header><!-- /#header -->
 	
     <div id="wrapper">
-	    <nav id="navigation" class="col-full" role="navigation">
+        <nav id="navigation" class="col-full" role="navigation">
             <ul id="main-nav" class="nav fl sf-js-enabled">
                 <li id="menu-item-1671" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1671"><a href="/Account" class="sf-with-ul">Account</a>
                 </li>
@@ -77,8 +82,8 @@
             </ul>
 
             <div id="cart">
-         @Html.Partial(MVC.Shared.Views.Partial.QuickCart, Model.Cart)
-         </div>
+                @Html.Partial(MVC.Shared.Views.Partial.QuickCart, Model.Cart)
+            </div>
         </nav><!-- /#navigation -->
         <div id="content" class="col-full">
             @if(Model.BreadCrumbs.Count > 0)
@@ -113,26 +118,26 @@
     </div>
     <footer id="footer">
 
-    <div class="col-full">
+        <div class="col-full">
 
-    	<div id="copyright" class="col-left">
-    	    		<p>Karrbros © @DateTime.Now.Year. All Rights Reserved.</p>
-    	    	</div>
+            <div id="copyright" class="col-left">
+                <p>Karrbros © @DateTime.Now.Year. All Rights Reserved.</p>
+            </div>
     	
-    	<div id="credit" class="col-right">
-    	    		<p>Powered by <a href="http://www.social-threads.com">Social Threads</a>.</p>
-    	    	</div>
+            <div id="credit" class="col-right">
+                <p>Powered by <a href="http://www.social-threads.com">Social Threads</a>.</p>
+            </div>
     
-    </div>
+        </div>
 
-</footer>
+    </footer>
 
     <!-- Javascript at the bottom for fast page loading -->
 
     <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script>!window.jQuery && document.write(unescape('%3Cscript src="@Url.Content("~/js/libs/jquery-1.5.1.min.js")"%3E%3C/script%3E'))</script>
-@*    <script src=" //ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>*@
+    @*    <script src=" //ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>*@
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/general.js"></script>
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/respond.IE.js"></script>
     <script src="@(Model.URLs.CDNThemes)/@(Model.Theme.Name)/Scripts/third-party.js"></script>
