@@ -24,6 +24,7 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static class MVC {
     public static SOC.Web.Controllers.AccountController Account = new SOC.Web.Controllers.T4MVC_AccountController();
+    public static SOC.Web.Controllers.AuthController Auth = new SOC.Web.Controllers.T4MVC_AuthController();
     public static SOC.Web.Controllers.BaseController Base = new SOC.Web.Controllers.T4MVC_BaseController();
     public static SOC.Web.Controllers.CartController Cart = new SOC.Web.Controllers.T4MVC_CartController();
     public static SOC.Web.Controllers.DesignController Design = new SOC.Web.Controllers.T4MVC_DesignController();

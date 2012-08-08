@@ -42,6 +42,11 @@ namespace SOC.Web.Controllers {
 
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ActionResult LogOn() {
+            return new T4MVC_ActionResult(Area, Name, ActionNames.LogOn);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public System.Web.Mvc.ActionResult Subscribe() {
             return new T4MVC_ActionResult(Area, Name, ActionNames.Subscribe);
         }
@@ -66,6 +71,7 @@ namespace SOC.Web.Controllers {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass {
             public readonly string LogOn = "LogOn";
+            public readonly string LogOff = "LogOff";
             public readonly string MyAccount = "MyAccount";
             public readonly string Subscribe = "Subscribe";
             public readonly string Contact = "Contact";
@@ -74,12 +80,20 @@ namespace SOC.Web.Controllers {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants {
             public const string LogOn = "LogOn";
+            public const string LogOff = "LogOff";
             public const string MyAccount = "MyAccount";
             public const string Subscribe = "Subscribe";
             public const string Contact = "Contact";
         }
 
 
+        static readonly ActionParamsClass_LogOn s_params_LogOn = new ActionParamsClass_LogOn();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_LogOn LogOnParams { get { return s_params_LogOn; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_LogOn {
+            public readonly string returnUrl = "returnUrl";
+        }
         static readonly ActionParamsClass_Subscribe s_params_Subscribe = new ActionParamsClass_Subscribe();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ActionParamsClass_Subscribe SubscribeParams { get { return s_params_Subscribe; } }
@@ -102,6 +116,7 @@ namespace SOC.Web.Controllers {
         public class ViewNames {
             public readonly string Login = "~/Views/Account/Login.cshtml";
             public readonly string LogOn = "~/Views/Account/LogOn.cshtml";
+            public readonly string MyAccount = "~/Views/Account/MyAccount.cshtml";
         }
     }
 
@@ -109,14 +124,14 @@ namespace SOC.Web.Controllers {
     public class T4MVC_AccountController: SOC.Web.Controllers.AccountController {
         public T4MVC_AccountController() : base(Dummy.Instance) { }
 
-        public override System.Web.Mvc.ActionResult LogOn() {
+        public override System.Web.Mvc.ActionResult LogOn(string returnUrl) {
             var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.LogOn);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult LogOn(string loginIdentifier) {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.LogOn);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "loginIdentifier", loginIdentifier);
+        public override System.Web.Mvc.ActionResult LogOff() {
+            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.LogOff);
             return callInfo;
         }
 
